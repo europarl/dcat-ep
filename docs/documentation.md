@@ -89,6 +89,6 @@ C1--dcat:previousVersion-->C0
 <dl>
 
 <dt>[VOCAB-DCAT-3]</dt>
-<dd><cite>Data Catalog Vocabulary (DCAT) - Version 3</cite>. Riccardo Albertoni; David Browning; Simon Cox; Alejandra Gonzalez Beltran; Andrea Perego; Peter Winstanley. W3C. 4 February 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/vocab-dcat-3/">https://www.w3.org/TR/vocab-dcat-3/</a></dd>
+<dd><cite>Data Catalog Vocabulary (DCAT) - Version 3</cite>. Riccardo Albertoni; David Browning; Simon Cox; Alejandra Gonzalez Beltran; Andrea Perego; Peter Winstanley. W3C. 10 May 2022. W3C Working Draft. URL: <a href="https://www.w3.org/TR/vocab-dcat-3/">https://www.w3.org/TR/vocab-dcat-3/</a></dd>
 
 </dl>
