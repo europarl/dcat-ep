@@ -2,11 +2,11 @@
 
 |Prefix|Namespace URI|
 |--|--|
-|`adms:`|http://www.w3.org/ns/adms#|
-|`dcat:`|http://www.w3.org/ns/dcat#|
-|`dcterms:`|http://purl.org/dc/terms/|
-|`iana:`|https://www.iana.org/assignments/|
-|`op-aut:`|http://publications.europa.eu/resource/authority/|
+|`adms:`|`http://www.w3.org/ns/adms#`|
+|`dcat:`|`http://www.w3.org/ns/dcat#`|
+|`dcterms:`|`http://purl.org/dc/terms/`|
+|`iana:`|`https://www.iana.org/assignments/`|
+|`op-aut:`|`http://publications.europa.eu/resource/authority/`|
 
 |Vocabulary name|Vocabulary URI|Used in class|With property|
 |--|--|--|--|
