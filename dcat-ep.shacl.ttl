@@ -31,7 +31,7 @@
     adms:Asset;
   dcterms:abstract "DCAT-EP is an extension of the DCAT Application Profile for European data portals (DCAT-AP), designed and used for documenting datasets and data services of the European Parliament."@en;
   dcterms:conformsTo <https://www.w3.org/TR/shacl>;
-  dcterms:created "2021-10-14"^^xsd:date;
+  dcterms:created "2022-05-19"^^xsd:date;
   dcterms:creator <http://publications.europa.eu/resource/dataset/corporate-body/EP>;
   dcterms:dateCopyrighted "2022"^^xsd:gYear;
   dcterms:description "DCAT-EP is an extension of the DCAT Application Profile for European data portals (DCAT-AP), designed and used for documenting datasets and data services of the European Parliament."@en;
