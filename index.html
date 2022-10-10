@@ -1,0 +1,2380 @@
+<!DOCTYPE HTML><html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <style>
+					body {
+						margin: 0;
+						font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+							"Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+							"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+							"Noto Color Emoji";
+						background-color: #fff;
+					}
+					
+					.anchor {
+						float: left;
+						padding-right: 4px;
+						margin-left: -20px;
+						line-height: 1;
+						padding-top: 12px;
+					}
+							
+					a {
+						color: #007bff;
+						text-decoration: none;
+						background-color: transparent;
+					}
+					
+					a:-webkit-any-link {
+						cursor: pointer;
+					}
+					
+					.p {
+						font-size: 0.875em;
+					}
+					
+					h2 {margin: 25px 0px 10px 0px;}
+					
+					@media only print {
+					}
+					
+					@page {
+						size: A4 portrait;
+						margin-top: 1.2cm;
+						margin-bottom: 1.2cm;
+						margin-left: 1.2cm;
+						margin-right: 1.2cm;
+						background-repeat: no-repeat;
+						background-position: 40px 10px;
+						
+						@bottom-center
+						{
+						content
+						:
+						counter(
+						page
+						);
+					}
+					
+					}
+							
+					/* This section draw the format web */
+					.ul_type_none {
+						list-style-type: none;
+					}
+					
+					.sp_list_description_properties ul {
+						display: block;
+						list-style-type: disc;
+						margin-block-start: 1em;
+						margin-block-end: 1em;
+						margin-inline-start: 0px;
+						margin-inline-end: 0px;
+						padding-inline-start: 40px;
+					}
+					
+					dl, ol, ul {
+						margin-top: 0;
+						margin-bottom: 1rem;
+					}
+					
+					li {
+						display: list-item;
+						text-align: -webkit-match-parent;
+					}
+							
+					.sp_ul {
+						list-style-type: disc;
+					}
+					
+					.sp_section_title_header {
+						margin-top: 0;
+						margin-bottom: 2.5rem !important;
+						margin-block-start: 0.67em;
+					    margin-block-end: 0.67em;
+					    margin-inline-start: 0px;
+					    margin-inline-end: 0px;    
+					}
+					
+					.sp_section_title_header {
+					    font-size: 1.5625rem;
+					}
+					
+					
+					.sp_section_subtitle {
+						margin-top: 0;
+					}
+					
+					.sp_section_subtitle ,.sp_section_title_table {
+						margin-block-start: 0.83em;
+					    margin-block-end: 0.83em;
+					    margin-inline-start: 0px;
+					    margin-inline-end: 0px;    
+					}
+							
+					.sp_section_title_header, .sp_section_subtitle, .sp_section_title_table {
+						margin-bottom: 0.5rem;
+						display: block;
+						font-weight: 500;
+						color: #1e1e1f;
+						line-height: 1.2em;
+					}
+					
+					.sp_section_title_header, 
+						.sp_section_title_toc, 
+						.sp_section_title_table, 
+						.sp_section_subtitle {
+						font-family: Georgia, Garamond, serif;	
+					}	
+					 
+					table {
+						display: table;
+						border-spacing: 0px;
+						margin-botton: 1rem;
+					}
+					
+					tr:nth-child(even) {
+						background-color: #eee;
+					}
+							
+					.sp_table_prefixes table {
+						border-collapse: collapse;
+						margin-bottom: 1rem;
+						color: #212529;
+					}
+											
+					.sp_table_prefixes td {
+						padding: 0.25rem;
+						vertical-align: top;
+						border-top: 1px solid #dee2e6;
+					}
+					
+					.sp_table_propertyshapes {
+						border-collapse: collapse;
+						width: 100%;
+					}
+										
+					.sp_table_propertyshapes thead {
+						display: table-header-group;
+						vertical-align: middle;
+						border-color: inherit;
+					}
+													
+					.sp_table_propertyshapes tr {
+					    display: table-row;
+					    vertical-align: inherit;
+					    border-color: inherit;
+					}
+													
+					.sp_table_propertyshapes th:nth-child(4) {
+						width: 6%;
+					}
+													
+					.sp_table_propertyshapes td {
+						padding: 0.75rem;
+						border-top: 1px solid #dee2e6;
+					}
+													
+					.sp_table_propertyshapes tbody {
+						display: table-row-group;
+						vertical-align: middle;
+						border-color: inherit;
+					}
+										
+					.sp_table_propertyshapes_col_description {
+						word-break: break-word;
+					}
+					
+					.sp_serialization_badge {
+						margin-right: 0.5em;
+					}
+							
+					
+							.container {
+							    width: calc(100% - 40px);
+							    max-width: 1000px;
+							    margin-left: auto;
+							    margin-right: auto;
+							}
+							.container {width: calc(100% - 500px);}
+							.toc {
+								position: fixed;
+								top: 0;
+								left: 0;
+								font-size: small;
+								padding: 10px 20px;
+								width: auto;
+								border-right: solid 2px #eeeeee;
+								bottom: 0;
+								overflow-y: scroll;
+								background-color:white;
+							}
+							.sp_list_toc {padding-left: 0px;}							
+						</style>
+      <meta charset="UTF-8">
+      <meta name="lang" content="en">
+      <meta property="og:locale" content="en">
+      <title>DCAT-EP Application Profile</title>
+      <meta name="apple-mobile-web-app-title" content="DCAT-EP Application Profile">
+      <meta name="twitter:title" content="DCAT-EP Application Profile">
+      <meta property="og:title" content="DCAT-EP Application Profile">
+	  
+<style type="text/css">
+.container {width: calc(100% - 550px);}
+.toc {overflow-y: auto;}
+.sp_list_toc li {padding: 2px;}							
+.sp_section_title_header {font-size:2em;}
+.sp_section_title_header {margin-top:2em;}
+.logo {width:125px;position:absolute;right:70px;top:50px;}
+.self-link {color:inherit;font-size:1rem;opacity:.3 !important;}
+.self-link:hover {opacity:.5 !important}
+.copyright {font-size:small;}
+header h2 {font-family:Georgia, Garamond, serif;font-weight:normal;margin-bottom:2em;margin-top:-1em;}
+summary {font-weight:bold;margin-bottom:1em;}
+dt {font-weight:bold;}
+figcaption {text-align:center;}
+
+body.draft{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="400px" width="400px"><text x="50%" y="50%"  dominant-baseline="middle" text-anchor="middle" transform="rotate(-45, 200, 200)" stroke-width="0" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" font-size="80" font-weight="bold" font-family="Arial, sans-serif" opacity="0.05">DRAFT</text></svg>') 0 0 repeat;}
+
+
+</style>
+	  
+   </head>
+   <body class="draft">
+      <div class="sp_container_principal container pt-4">
+
+<header>
+<img class="logo" src="https://www.europarl.europa.eu/portal/img/ep-logo.svg"/>
+<h1 class="mb-4 sp_section_title_header">DCAT-EP Application Profile</h1>
+<h2 class="subtitle">Version 0.3</h2>
+</header>
+
+<!--
+         <table style="width:100%">
+            <tr>
+-->
+<!--
+               <td width="20%"><img src="https://www.europarl.europa.eu/portal/img/ep-logo.svg"></td>
+               <td width="80%">
+                  <h1 class="mb-4 sp_section_title_header">DCAT-EP Application Profile</h1>
+               </td>
+-->
+<!--
+               <td width="75%">
+                  <h1 class="mb-4 sp_section_title_header">DCAT-EP Application Profile</h1>
+               </td>
+               <td width="15%"><img src="https://www.europarl.europa.eu/portal/img/ep-logo.svg"></td>
+
+            </tr>
+         </table>
+-->
+<!--
+         <div><b>Creation date: </b>2021-10-14<br><b>Issue date: </b>2022-10-10<br><b>Last updated: </b>2022-10-07<br><b>Copyright date: </b>2022<br><b>Version: </b>0.3<br><b>License: </b><a href="https://www.europarl.europa.eu/legal-notice/" target="_blank">https://www.europarl.europa.eu/legal-notice/</a><br><b>Creator: </b><a href="http://publications.europa.eu/resource/dataset/corporate-body/EP" target="_blank">http://publications.europa.eu/resource/dataset/corporate-body/EP</a><br><b>Publisher: </b><a href="http://publications.europa.eu/resource/dataset/corporate-body/EP" target="_blank">http://publications.europa.eu/resource/dataset/corporate-body/EP</a><br><b>Rightsholder: </b><a href="http://publications.europa.eu/resource/dataset/corporate-body/EURUN" target="_blank">http://publications.europa.eu/resource/dataset/corporate-body/EURUN</a><br><b>Feedback : </b><a href="https://github.com/europarl/dcat-ep" target="_blank">https://github.com/europarl/dcat-ep</a><br><br></div>
+-->
+
+<details open>
+<summary>More details about this document</summary>
+<dl>
+<dt>This version:<dt><dd><a href="https://data.europarl.europa.eu/def/dcat-ep/0.3/">https://data.europarl.europa.eu/def/dcat-ep/0.3/</a></dd>
+<dt>Latest version:</dt><dd><a href="https://data.europarl.europa.eu/def/dcat-ep#">https://data.europarl.europa.eu/def/dcat-ep#</a></dd>
+<dt>Creation date:</dt><dd>2021-10-14</dd>
+<dt>Issue date:</dt><dd>2022-10-10</dd>
+<dt>Last updated:</dt><dd>2022-10-07</dd>
+<dt>Version:</dt><dd>0.3</dd>
+<dt>Status:</dt><dd>Under development</dd>
+<dt>Creator:</dt><dd><a href="https://www.europarl.europa.eu/" target="_blank">European Parliament</a></dd>
+<dt>Publisher:</dt><dd><a href="https://www.europarl.europa.eu/" target="_blank">European Parliament</a></dd>
+<dt>Feedback:</dt><dd><a href="https://github.com/europarl/dcat-ep/" target="_blank">https://github.com/europarl/dcat-ep/</a></dd>
+</dl>
+</details>
+
+<p>Available serialisations: <a href="./dcat-ep.shacl.ttl">SHACL (Turtle)</a></p>
+
+<p class="copyright">Copyright &copy; 2022 <a href="https://europa.eu/" target="_blank">European Union</a>. This document is distributed under the terms and conditions described in the <a href="https://www.europarl.europa.eu/legal-notice/" target="_blank">European Parliament Legal Notice</a>.</p>
+
+<hr/>
+         <div class="row mt-3">
+<!--
+            <div class="col">
+               <h2 id="abstract" class="sp_section_subtitle">Abstract</h2>DCAT-EP is an extension of the DCAT Application Profile for European data portals (DCAT-AP), designed and used for documenting datasets and data services of the European Parliament.</div>
+-->
+
+<div class="col">
+<h2 id="abstract" class="sp_section_subtitle">Abstract</h2>
+<p>DCAT-EP is an extension of the DCAT Application Profile for European data portals (DCAT-AP), designed and used for documenting datasets and data services of the European Parliament.</p>
+<h2 id="usage-note" class="sp_section_subtitle">Usage note</h2>
+<p>This version of DCAT-EP is a draft specification and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress.</p>
+</div>
+
+         </div>
+         <div class="sp_section_title_toc toc">
+            <h2 id="Index">Table of Contents</h2>
+            <ul role="list" class="sp_list_toc ul_type_none t-x-mode">
+               <li><a href="#prefixes">Namespaces</a></li>
+               <li><a href="#diagrams">Diagrams</a></li>
+               <li><a href="#description">Description</a></li>
+               <li><a href="#foaf:Agent">Agent</a></li>
+               <li><a href="#dcat:Catalog">Catalog</a></li>
+               <li><a href="#dcat:CatalogRecord">Catalog Record</a></li>
+               <li><a href="#spdx:Checksum">Checksum</a></li>
+               <li><a href="#skos:Concept">Concept</a></li>
+               <li><a href="#skos:ConceptScheme">Concept Scheme</a></li>
+               <li><a href="#dcat:DataService">Data Service</a></li>
+               <li><a href="#dcat:Dataset">Dataset</a></li>
+               <li><a href="#dcat:DatasetSeries">Dataset Series</a></li>
+               <li><a href="#euvoc:DatasetStatus">Dataset Status</a></li>
+               <li><a href="#dcat:Distribution">Distribution</a></li>
+               <li><a href="#foaf:Document">Document</a></li>
+               <li><a href="#dcterms:MediaTypeOrExtent">File Type</a></li>
+               <li><a href="#dcterms:Frequency">Frequency</a></li>
+               <li><a href="#vcard:Kind">Kind</a></li>
+               <li><a href="#dcterms:LicenseDocument">Licence Document</a></li>
+               <li><a href="#dcterms:LinguisticSystem">LinguisticSystem</a></li>
+               <li><a href="#dcterms:Location">Location</a></li>
+               <li><a href="#dcterms:MediaType">Media Type</a></li>
+               <li><a href="#dcterms:PeriodOfTime">Period of time</a></li>
+               <li><a href="#dcterms:RightsStatement">RightsStatement</a></li>
+               <li><a href="#dcterms:Standard">Standard</a></li>
+               <li><a href="#euvoc:DatasetTheme">Theme</a></li>
+            </ul>
+         </div>
+         <div class="row mt-3">
+            <div class="col">
+               <section id="prefixes">
+                  <h2 class="sp_section_title_table">Namespaces</h2>
+                  <table class="sp_table_prefixes table table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Prefix</th>
+                           <th>Namespace</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>adms</td>
+                           <td><a href="http://www.w3.org/ns/adms#" target="_blank">http://www.w3.org/ns/adms#</a></td>
+                        </tr>
+                        <tr>
+                           <td>dcat</td>
+                           <td><a href="http://www.w3.org/ns/dcat#" target="_blank">http://www.w3.org/ns/dcat#</a></td>
+                        </tr>
+                        <tr>
+                           <td>dcterms</td>
+                           <td><a href="http://purl.org/dc/terms/" target="_blank">http://purl.org/dc/terms/</a></td>
+                        </tr>
+                        <tr>
+                           <td>foaf</td>
+                           <td><a href="http://xmlns.com/foaf/0.1/" target="_blank">http://xmlns.com/foaf/0.1/</a></td>
+                        </tr>
+                        <tr>
+                           <td>op-aut</td>
+                           <td><a href="http://publications.europa.eu/resource/authority/" target="_blank">http://publications.europa.eu/resource/authority/</a></td>
+                        </tr>
+                        <tr>
+                           <td>rdf</td>
+                           <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" target="_blank">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></td>
+                        </tr>
+                        <tr>
+                           <td>skos</td>
+                           <td><a href="http://www.w3.org/2004/02/skos/core#" target="_blank">http://www.w3.org/2004/02/skos/core#</a></td>
+                        </tr>
+                        <tr>
+                           <td>spdx</td>
+                           <td><a href="http://spdx.org/rdf/terms#" target="_blank">http://spdx.org/rdf/terms#</a></td>
+                        </tr>
+                        <tr>
+                           <td>vcard</td>
+                           <td><a href="http://www.w3.org/2006/vcard/ns#" target="_blank">http://www.w3.org/2006/vcard/ns#</a></td>
+                        </tr>
+                        <tr>
+                           <td>xsd</td>
+                           <td><a href="http://www.w3.org/2001/XMLSchema#" target="_blank">http://www.w3.org/2001/XMLSchema#</a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="sp_section_row mt-3">
+            <div class="sp_section_col">
+               <section>
+<!--
+                  <h2 id="diagrams" class="sp_section_subtitle">Diagrams</h2>
+-->
+				  
+<h2 id="diagrams" class="sp_section_subtitle">Diagram</h2>
+
+<figure id="fig-diagram">
+  <a title="Click to open the diagram at full size" href="./dcat-ep.svg" target="_blank"><img alt="Diagram" src="./dcat-ep.svg" width="100%"/></a>
+  <figcaption>DCAT-EP diagram</figcaption>
+</figure>				  
+				  
+               </section>
+            </div>
+         </div>
+         <div>
+            <h2 id="description" class="sp_section_subtitle">Description</h2>DCAT-EP is an extension of the DCAT Application Profile for European data portals (DCAT-AP), designed and used for documenting datasets and data services of the European Parliament.</div>
+         <div class="row mt-3">
+            <div class="col">
+               <section id="foaf:Agent">
+                  <h2 class="sp_section_title_table">Agent</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: http://publications.europa.eu/resource/authority/corporate-body/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>in scheme</td>
+                           <td><code><a href="http://www.w3.org/2004/02/skos/core#inScheme">skos:inScheme</a></code></td>
+                           <td><code>op-aut:dataset-status</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property stating the concept scheme that a given resource is part of</td>
+                        </tr>
+                        <tr>
+                           <td>in scheme</td>
+                           <td><code><a href="http://www.w3.org/2004/02/skos/core#inScheme">skos:inScheme</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property stating the concept scheme that a given resource is part of</td>
+                        </tr>
+                        <tr>
+                           <td>in scheme</td>
+                           <td><code><a href="http://www.w3.org/2004/02/skos/core#inScheme">skos:inScheme</a></code></td>
+                           <td><code>op-aut:dataset-theme</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property stating the concept scheme that a given resource is part of</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcat:Catalog">
+                  <h2 class="sp_section_title_table">Catalog</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: https://data.europarl.europa.eu/catalogue/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>access rights</td>
+                           <td><code><a href="http://purl.org/dc/terms/accessRights">dcterms:accessRights</a></code></td>
+                           <td><code><a href="#dcterms:RightsStatement">RightsStatement</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to information that indicates whether the Catalogue is public,
+                              has access restrictions or is not public. In DCAT-EP, this property takes as value
+                              the concept of the EU Vocabularies Access Rights Named Authority List: http://publications.europa.eu/resource/authority/access-right</td>
+                        </tr>
+                        <tr>
+                           <td>accrual periodicity</td>
+                           <td><code><a href="http://purl.org/dc/terms/accrualPeriodicity">dcterms:accrualPeriodicity</a></code></td>
+                           <td><code></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">The frequency with which the Catalogue is updated. A Catalogue is updated when the
+                              contained Catalogue Records are modified, added, or withdrawn.</td>
+                        </tr>
+                        <tr>
+                           <td>application profile</td>
+                           <td><code><a href="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo</a></code></td>
+                           <td><code><a href="#dcterms:Standard">Standard</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to an ontology or application profile that the Catalogue conforms
+                              to - i.e., to the ontologies or application profiles used for the contained Catalogue
+                              Records. In case of conformance to multiple ontologies (e.g., DCAT-EP is a profile
+                              of DCAT), application profiles (e.g., DCAT-EP is a profile of DCAT-AP), and versions
+                              of them, this property can be repeated multiple times.</td>
+                        </tr>
+                        <tr>
+                           <td>creator</td>
+                           <td><code><a href="http://purl.org/dc/terms/creator">dcterms:creator</a></code></td>
+                           <td><code><a href="#foaf:Agent">Agent</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">The entity responsible for producing the Catalogue.</td>
+                        </tr>
+                        <tr>
+                           <td>dataset</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#dataset">dcat:dataset</a></code></td>
+                           <td><code><a href="#dcat:Dataset">dcat:Dataset </a></code><code>or</code><code><a href="# dcat:DatasetSeries"> dcat:DatasetSeries </a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property links the Catalogue with a Dataset that is part of the Catalogue.</td>
+                        </tr>
+                        <tr>
+                           <td>date copyrighted</td>
+                           <td><code><a href="http://purl.org/dc/terms/dateCopyrighted">dcterms:dateCopyrighted</a></code></td>
+                           <td><code>xsd:gYear</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Date of copyright of the Catalogue.</td>
+                        </tr>
+                        <tr>
+                           <td>description</td>
+                           <td><code><a href="http://purl.org/dc/terms/description">dcterms:description</a></code></td>
+                           <td><code>rdf:langString</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a free-text account of the Catalogue.This property can be repeated
+                              for parallel language versions of the name.</td>
+                        </tr>
+                        <tr>
+                           <td>homepage</td>
+                           <td><code><a href="http://xmlns.com/foaf/0.1/homepage">foaf:homepage</a></code></td>
+                           <td><code><a href="#foaf:Document">Document</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a web page that acts as the main page for the Catalogue (a
+                              public Web document usually available in HTML). foaf:homepage is an inverse functional
+                              property (IFP) which means that it MUST be unique and precisely identify the Web-page
+                              for the resource.</td>
+                        </tr>
+                        <tr>
+                           <td>identifier</td>
+                           <td><code><a href="http://purl.org/dc/terms/identifier">dcterms:identifier</a></code></td>
+                           <td><code>xsd:anyUri</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the main identifier for the Catalogue, i.e., the identifier
+                              issued by the original publisher of the Catalogue. It is the same URI of the Catalogue
+                              itself, typed as an xsd:anyURI.</td>
+                        </tr>
+                        <tr>
+                           <td>language</td>
+                           <td><code><a href="http://purl.org/dc/terms/language">dcterms:language</a></code></td>
+                           <td><code><a href="#dcterms:LinguisticSystem">LinguisticSystem</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a language used in the textual metadata describing titles,
+                              descriptions, etc. of the Datasets in the Catalogue. This property can be repeated
+                              if the metadata is provided in multiple languages.</td>
+                        </tr>
+                        <tr>
+                           <td>licence</td>
+                           <td><code><a href="http://purl.org/dc/terms/license">dcterms:license</a></code></td>
+                           <td><code><a href="#dcterms:LicenseDocument">Licence Document</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to the license under which the Catalogue metadata can be used
+                              or reused.</td>
+                        </tr>
+                        <tr>
+                           <td>publisher</td>
+                           <td><code><a href="http://purl.org/dc/terms/publisher">dcterms:publisher</a></code></td>
+                           <td><code><a href="#foaf:Agent">Agent</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to an entity (organisation) responsible for making the Catalogue
+                              available.</td>
+                        </tr>
+                        <tr>
+                           <td>record</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#record">dcat:record</a></code></td>
+                           <td><code><a href="#dcat:CatalogRecord">Catalog Record</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a Catalogue Record that is part of the Catalogue.</td>
+                        </tr>
+                        <tr>
+                           <td>release date</td>
+                           <td><code><a href="http://purl.org/dc/terms/issued">dcterms:issued</a></code></td>
+                           <td><code>xsd:dateTime</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the date of formal issuance (e.g., publication) of the Catalogue.</td>
+                        </tr>
+                        <tr>
+                           <td>rights holder</td>
+                           <td><code><a href="http://purl.org/dc/terms/rightsHolder">dcterms:rightsHolder</a></code></td>
+                           <td><code><a href="#foaf:Agent">Agent</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">A person or organisation owning or managing rights over the Catalogue.</td>
+                        </tr>
+                        <tr>
+                           <td>service</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#service">dcat:service</a></code></td>
+                           <td><code><a href="#dcat:DataService">Data Service</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a site or end-point that is listed in the Catalogue.</td>
+                        </tr>
+                        <tr>
+                           <td>spatial / geographic</td>
+                           <td><code><a href="http://purl.org/dc/terms/spatial">dcterms:spatial</a></code></td>
+                           <td><code><a href="#dcterms:Location">Location</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a geographic region that is covered by the Catalogue.</td>
+                        </tr>
+                        <tr>
+                           <td>themes</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#themeTaxonomy">dcat:themeTaxonomy</a></code></td>
+                           <td><code><a href="#skos:ConceptScheme">Concept Scheme</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a knowledge organisation system used to classify the Catalogue's
+                              Datasets. Values are concepts of the op-aut:dataset-theme vocabulary.</td>
+                        </tr>
+                        <tr>
+                           <td>title</td>
+                           <td><code><a href="http://purl.org/dc/terms/title">dcterms:title</a></code></td>
+                           <td><code>rdf:langString</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a name given to the Catalogue. This property can be repeated
+                              for parallel language versions of the name.</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                        <tr>
+                           <td>update / modification date</td>
+                           <td><code><a href="http://purl.org/dc/terms/modified">dcterms:modified</a></code></td>
+                           <td><code>xsd:dateTime</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the most recent date on which the Catalogue was modified.</td>
+                        </tr>
+                        <tr>
+                           <td>version</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#version">dcat:version</a></code></td>
+                           <td><code>xsd:string</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to the version number of Catalogue.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcat:CatalogRecord">
+                  <h2 class="sp_section_title_table">Catalog Record</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: https://data.europarl.europa.eu/record/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>application profile</td>
+                           <td><code><a href="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo</a></code></td>
+                           <td><code><a href="#dcterms:Standard">Standard</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to an ontology or application profile that the Catalogue Record
+                              conforms to. In case of conformance to multiple ontologies (e.g., DCAT-EP is a profile
+                              of DCAT), application profiles (e.g., DCAT-EP is a profile of DCAT-AP), and versions
+                              of them, this property can be repeated multiple times.</td>
+                        </tr>
+                        <tr>
+                           <td>language</td>
+                           <td><code><a href="http://purl.org/dc/terms/language">dcterms:language</a></code></td>
+                           <td><code><a href="#dcterms:LinguisticSystem">LinguisticSystem</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a language used in the textual metadata describing titles,
+                              descriptions, etc. of the Catalogue Record. This property can be repeated if the metadata
+                              is provided in multiple languages</td>
+                        </tr>
+                        <tr>
+                           <td>listing date</td>
+                           <td><code><a href="http://purl.org/dc/terms/issued">dcterms:issued</a></code></td>
+                           <td><code>xsd:dateTime</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the date on which the Catalogue Record was published.</td>
+                        </tr>
+                        <tr>
+                           <td>primary topic</td>
+                           <td><code><a href="http://xmlns.com/foaf/0.1/primaryTopic">foaf:primaryTopic</a></code></td>
+                           <td><code><a href="#dcat:Catalog">dcat:Catalog </a></code><code>or</code><code><a href="# dcat:Dataset"> dcat:Dataset </a></code><code>or</code><code><a href="# dcat:DatasetSeries"> dcat:DatasetSeries </a></code><code>or</code><code><a href="# dcat:DataService"> dcat:DataService </a></code><code>or</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property links the Catalogue Record to the resource (Dataset, Dataset Series,
+                              etc.) described in the record.</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                        <tr>
+                           <td>update / modification date</td>
+                           <td><code><a href="http://purl.org/dc/terms/modified">dcterms:modified</a></code></td>
+                           <td><code>xsd:dateTime</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the most recent date on which the Catalogue Record was changed
+                              or modified.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="spdx:Checksum">
+                  <h2 class="sp_section_title_table">Checksum</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: BlankNode</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>algorithm</td>
+                           <td><code><a href="http://spdx.org/rdf/terms#algorithm">spdx:algorithm</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property identifies the algorithm used to produce the Checksum.</td>
+                        </tr>
+                        <tr>
+                           <td>checksum value</td>
+                           <td><code><a href="http://spdx.org/rdf/terms#checksumValue">spdx:checksumValue</a></code></td>
+                           <td><code>xsd:hexBinary</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property provides a lower case hexadecimal encoded digest value produced using
+                              a specific algorithm.</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="skos:Concept">
+                  <h2 class="sp_section_title_table">Concept</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="skos:ConceptScheme">
+                  <h2 class="sp_section_title_table">Concept Scheme</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                  </ul>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcat:DataService">
+                  <h2 class="sp_section_title_table">Data Service</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: https://data.europarl.europa.eu/service/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>access rights</td>
+                           <td><code><a href="http://purl.org/dc/terms/accessRights">dcterms:accessRights</a></code></td>
+                           <td><code><a href="#dcterms:RightsStatement">RightsStatement</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to information that indicates whether the Data Service is public,
+                              has access restrictions or is not public. In DCAT-EP, this property takes as value
+                              the concept of the EU Vocabularies Access Rights Named Authority List: http://publications.europa.eu/resource/authority/access-right</td>
+                        </tr>
+                        <tr>
+                           <td>conforms to</td>
+                           <td><code><a href="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo</a></code></td>
+                           <td><code>rdfs:Standard</code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refer to an established standard to which the Data Service conforms
+                              to. In case of conformance to multiple standards, and versions of them, this property
+                              can be repeated multiple times.</td>
+                        </tr>
+                        <tr>
+                           <td>contact point</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#contactPoint">dcat:contactPoint</a></code></td>
+                           <td><code><a href="#vcard:Kind">Kind</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains contact information that can be used for sending comments about
+                              the Data Service. Relevant contact information for the cataloged Data Service. Use
+                              of vCard is recommended.</td>
+                        </tr>
+                        <tr>
+                           <td>description</td>
+                           <td><code><a href="http://purl.org/dc/terms/description">dcterms:description</a></code></td>
+                           <td><code>rdf:langString</code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a free-text account of the Data Service. This property can
+                              be repeated for parallel language versions of the description.</td>
+                        </tr>
+                        <tr>
+                           <td>endpoint URL</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#endpointURL">dcat:endpointURL</a></code></td>
+                           <td><code>rdfs:Resource</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">The root location or primary endpoint of the service (an IRI).</td>
+                        </tr>
+                        <tr>
+                           <td>endpoint description</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#endpointDescription">dcat:endpointDescription</a></code></td>
+                           <td><code>rdfs:Resource</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a description of the services available via the end-points,
+                              including their operations, parameters etc. The property gives specific details of
+                              the actual endpoint instances, while dcterms:conformsTo is used to indicate the general
+                              standard or specification that the endpoints implement. An endpoint description may
+                              be expressed in a machine-readable form.</td>
+                        </tr>
+                        <tr>
+                           <td>format</td>
+                           <td><code><a href="http://purl.org/dc/terms/format">dcterms:format</a></code></td>
+                           <td><code><a href="#dcterms:MediaTypeOrExtent">File Type</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to the file formats availabe for the API response.</td>
+                        </tr>
+                        <tr>
+                           <td>identifier</td>
+                           <td><code><a href="http://purl.org/dc/terms/identifier">dcterms:identifier</a></code></td>
+                           <td><code>xsd:anyUri</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the main identifier for the Data Service, i.e., the identifier
+                              issued by the original publisher of the Data Service. It is the same URI of the Data
+                              Service itself, typed as an xsd:anyURI.</td>
+                        </tr>
+                        <tr>
+                           <td>in catalog</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#inCatalog">dcat:inCatalog</a></code></td>
+                           <td><code><a href="#dcat:Catalog">Catalog</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property links the Data Service to the Catalogue listing it.</td>
+                        </tr>
+                        <tr>
+                           <td>licence</td>
+                           <td><code><a href="http://purl.org/dc/terms/license">dcterms:license</a></code></td>
+                           <td><code><a href="#dcterms:LicenseDocument">Licence Document</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the licence under which the Data Service is made available.</td>
+                        </tr>
+                        <tr>
+                           <td>publisher</td>
+                           <td><code><a href="http://purl.org/dc/terms/publisher">dcterms:publisher</a></code></td>
+                           <td><code><a href="#foaf:Agent">Agent</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to an entity (organisation) responsible for making the Data Service
+                              available.</td>
+                        </tr>
+                        <tr>
+                           <td>release date</td>
+                           <td><code><a href="http://purl.org/dc/terms/issued">dcterms:issued</a></code></td>
+                           <td><code>xsd:dateTime</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the date of formal issuance (e.g., publication) of the Data
+                              Service.</td>
+                        </tr>
+                        <tr>
+                           <td>serves dataset</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#servesDataset">dcat:servesDataset</a></code></td>
+                           <td><code><a href="#dcat:Dataset">Dataset</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Indicates to which Dataset the Data Service is related to.</td>
+                        </tr>
+                        <tr>
+                           <td>subject</td>
+                           <td><code><a href="http://purl.org/dc/terms/subject">dcterms:subject</a></code></td>
+                           <td><code><a href="#skos:Concept">Concept</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a keyword or tag describing the Data Service. Values are concept
+                              of Eurovoc vocabulary: http://eurovoc.europa.eu/</td>
+                        </tr>
+                        <tr>
+                           <td>theme</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#theme">dcat:theme</a></code></td>
+                           <td><code><a href="#skos:Concept">skos:Concept </a></code><code>or</code><code><a href="# euvoc:DataTheme"> euvoc:DataTheme </a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a category of the Data Service. A Data Service may be associated
+                              with multiple themes. Values are concepts of the op-aut:dataset-theme vocabulary.</td>
+                        </tr>
+                        <tr>
+                           <td>title</td>
+                           <td><code><a href="http://purl.org/dc/terms/title">dcterms:title</a></code></td>
+                           <td><code>rdf:langString</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a name given to the Data Service. This property can be repeated
+                              for parallel language versions of the name.</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                        <tr>
+                           <td>update / modification date</td>
+                           <td><code><a href="http://purl.org/dc/terms/modified">dcterms:modified</a></code></td>
+                           <td><code>xsd:dateTime</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the most recent date on which the Data Service was modified.</td>
+                        </tr>
+                        <tr>
+                           <td>version info</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#version">dcat:version</a></code></td>
+                           <td><code>xsd:string</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to the version number of a Data Service.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcat:Dataset">
+                  <h2 class="sp_section_title_table">Dataset</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: https://data.europarl.europa.eu/dataset/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>access rights</td>
+                           <td><code><a href="http://purl.org/dc/terms/accessRights">dcterms:accessRights</a></code></td>
+                           <td><code><a href="#dcterms:RightsStatement">RightsStatement</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to information that indicates whether the Dataset or the Dataset
+                              Series is public, has access restrictions or is not public. In DCAT-EP, this property
+                              takes as value the concept of the EU Vocabularies Access Rights Named Authority List:
+                              http://publications.europa.eu/resource/authority/access-right</td>
+                        </tr>
+                        <tr>
+                           <td>conforms to</td>
+                           <td><code><a href="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo</a></code></td>
+                           <td><code><a href="#dcterms:Standard">Standard</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to an implementing rule or other specification. In DCAT-EP, this
+                              property is used to specify the ontologies or application profiles used to represent
+                              the data (ORG-EP, ELI-EP, etc.). In case of conformance to multiple ontologies (e.g.,
+                              the ontologies used in application profiles), application profiles, and versions of
+                              them, this property can be repeated multiple times.</td>
+                        </tr>
+                        <tr>
+                           <td>contact point</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#contactPoint">dcat:contactPoint</a></code></td>
+                           <td><code><a href="#vcard:Kind">Kind</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains contact information that can be used for sending comments about
+                              the Dataset or the Dataset Series. Relevant contact information for the catalogued
+                              Dataset or Dataset Series. Use of vCard is recommended.</td>
+                        </tr>
+                        <tr>
+                           <td>creator</td>
+                           <td><code><a href="http://purl.org/dc/terms/creator">dcterms:creator</a></code></td>
+                           <td><code><a href="#foaf:Agent">Agent</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">The entity responsible for producing the Dataset or the Dataset Series.</td>
+                        </tr>
+                        <tr>
+                           <td>date copyrighted</td>
+                           <td><code><a href="http://purl.org/dc/terms/dateCopyrighted">dcterms:dateCopyrighted</a></code></td>
+                           <td><code>xsd:gYear</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Date of copyright of the Dataset or Dataset Series.</td>
+                        </tr>
+                        <tr>
+                           <td>description</td>
+                           <td><code><a href="http://purl.org/dc/terms/description">dcterms:description</a></code></td>
+                           <td><code>rdf:langString</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a free-text account of the Dataset or of the Dataset Series.
+                              This property can be repeated for parallel language versions of the description.</td>
+                        </tr>
+                        <tr>
+                           <td>distribution</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#distribution">dcat:distribution</a></code></td>
+                           <td><code>BlankNode</code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property links the Dataset to an available Distribution.</td>
+                        </tr>
+                        <tr>
+                           <td>frequency</td>
+                           <td><code><a href="http://purl.org/dc/terms/accrualPeriodicity">dcterms:accrualPeriodicity</a></code></td>
+                           <td><code><a href="#dcterms:Frequency">Frequency</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to the frequency at which the Dataset or a Dataset Series is
+                              updated. A Dataset Series is updated when any of its child Datasets is modified, added,
+                              or withdrawn.</td>
+                        </tr>
+                        <tr>
+                           <td>has current version</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#hasCurrentVersion">dcat:hasCurrentVersion</a></code></td>
+                           <td><code><a href="#dcat:Dataset">Dataset</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property is intended for relating a non-versioned or abstract Dataset to a single
+                              snapshot that can be used as a permalink to indicate the current version of the content.
+                              The notion of version used by this property is limited to versions resulting from
+                              revisions occurring to a Dataset as part of its life-cycle.</td>
+                        </tr>
+                        <tr>
+                           <td>has version</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#hasVersion">dcat:hasVersion</a></code></td>
+                           <td><code></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property is intended for relating a non-versioned or abstract resource to several
+                              versioned resources</td>
+                        </tr>
+                        <tr>
+                           <td>identifier</td>
+                           <td><code><a href="http://purl.org/dc/terms/identifier">dcterms:identifier</a></code></td>
+                           <td><code>xsd:anyURI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the main identifier for the Dataset, i.e., the identifier issued
+                              by the original publisher of the Dataset. It is the same URI of the Dataset itself,
+                              typed as an xsd:anyURI.</td>
+                        </tr>
+                        <tr>
+                           <td>in catalog</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#inCatalog">dcat:inCatalog</a></code></td>
+                           <td><code><a href="#dcat:Catalog">Catalog</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property links the Dataset or Dataset Series to the Catalogue listing it.</td>
+                        </tr>
+                        <tr>
+                           <td>in series</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#inSeries">dcat:inSeries</a></code></td>
+                           <td><code><a href="#dcat:DatasetSeries">Dataset Series</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a Dataset Series of which the Dataset is part.</td>
+                        </tr>
+                        <tr>
+                           <td>is replaced by</td>
+                           <td><code><a href="http://purl.org/dc/terms/isReplacedBy">dcterms:isReplacedBy</a></code></td>
+                           <td><code><a href="#dcat:Dataset">Dataset</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">A related Dataset that supplants, displaces, or supersedes the described Dataset.</td>
+                        </tr>
+                        <tr>
+                           <td>is version of</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#isVersionOf">dcat:isVersionOf</a></code></td>
+                           <td><code><a href="#dcat:Dataset">Dataset</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property is intended for relating a versioned resource to the corresponding non-versioned
+                              or abstract resource.</td>
+                        </tr>
+                        <tr>
+                           <td>issued</td>
+                           <td><code><a href="http://purl.org/dc/terms/issued">dcterms:issued</a></code></td>
+                           <td><code>xsd:dateTime</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the date of formal issuance (e.g., publication) of the Dataset
+                              or of the Dataset Series.</td>
+                        </tr>
+                        <tr>
+                           <td>language</td>
+                           <td><code><a href="http://purl.org/dc/terms/language">dcterms:language</a></code></td>
+                           <td><code><a href="#dcterms:LinguisticSystem">LinguisticSystem</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a language of the Dataset or of the Dataset Series. This property
+                              can be repeated if there are multiple languages in the Dataset.</td>
+                        </tr>
+                        <tr>
+                           <td>modified</td>
+                           <td><code><a href="http://purl.org/dc/terms/modified">dcterms:modified</a></code></td>
+                           <td><code>xsd:dateTime</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the most recent date on which the Dataset or the Dataset Series
+                              was modified. A Dataset Series is modified when any of its child Datasets is updated,
+                              added, or withdrawn.</td>
+                        </tr>
+                        <tr>
+                           <td>next</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#next">dcat:next</a></code></td>
+                           <td><code><a href="#dcat:Dataset">Dataset</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">The next Dataset (after the current one) in a Dataset Series.</td>
+                        </tr>
+                        <tr>
+                           <td>previous</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#prev">dcat:prev</a></code></td>
+                           <td><code><a href="#dcat:Dataset">Dataset</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">The previous Dataset (before the current one) in a Dataset Series.</td>
+                        </tr>
+                        <tr>
+                           <td>previous version</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#previousVersion">dcat:previousVersion</a></code></td>
+                           <td><code><a href="#dcat:Dataset">Dataset</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property is meant to be used to specify a version chain, consisting of snapshots
+                              of a Dataset. The notion of version used by this property is limited to versions resulting
+                              from revisions occurring to a Dataset as part of its life-cycle. One of the typical
+                              cases here is representing the history of the versions of a dataset that have been
+                              released over time.</td>
+                        </tr>
+                        <tr>
+                           <td>provenance</td>
+                           <td><code><a href="http://purl.org/dc/terms/provenance">dcterms:provenance</a></code></td>
+                           <td><code>dcterms:ProvenanceStatement</code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a statement about the lineage of a Dataset or a Dataset Series.</td>
+                        </tr>
+                        <tr>
+                           <td>publisher</td>
+                           <td><code><a href="http://purl.org/dc/terms/publisher">dcterms:publisher</a></code></td>
+                           <td><code><a href="#foaf:Agent">Agent</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to an entity (organisation) responsible for making the Dataset
+                              or the Dataset Series available.</td>
+                        </tr>
+                        <tr>
+                           <td>replaces</td>
+                           <td><code><a href="http://purl.org/dc/terms/replaces">dcterms:replaces</a></code></td>
+                           <td><code><a href="#dcat:Dataset">Dataset</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">A related Dataset that is supplanted, displaced, or superseded by the described Dataset.</td>
+                        </tr>
+                        <tr>
+                           <td>rights holder</td>
+                           <td><code><a href="http://purl.org/dc/terms/rightsHolder">dcterms:rightsHolder</a></code></td>
+                           <td><code><a href="#foaf:Agent">Agent</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">A person or organisation owning or managing rights over the Dataset or the Dataset
+                              Series.</td>
+                        </tr>
+                        <tr>
+                           <td>spatial coverage</td>
+                           <td><code><a href="http://purl.org/dc/terms/spatial">dcterms:spatial</a></code></td>
+                           <td><code><a href="#dcterms:Location">Location</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a geographic region that is covered by the Dataset or by the
+                              Dataset Series.</td>
+                        </tr>
+                        <tr>
+                           <td>status</td>
+                           <td><code><a href="http://www.w3.org/ns/adms#status">adms:status</a></code></td>
+                           <td><code><a href="#euvoc:DatasetStatus">Dataset Status</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to the maturity of the Dataset or of the Dataset Series. Values
+                              are concepts of EU Vocabularies Dataset Status Named Authority List: http://publications.europa.eu/resource/authority/dataset-status</td>
+                        </tr>
+                        <tr>
+                           <td>subject</td>
+                           <td><code><a href="http://purl.org/dc/terms/subject">dcterms:subject</a></code></td>
+                           <td><code><a href="#skos:Concept">Concept</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a keyword or tag describing the Dataset or of the Dataset Series.
+                              In DCAT-AP, this property takes as value the concepts of the EuroVoc vocabulary: http://eurovoc.europa.eu/</td>
+                        </tr>
+                        <tr>
+                           <td>temporal coverage</td>
+                           <td><code><a href="http://purl.org/dc/terms/temporal">dcterms:temporal</a></code></td>
+                           <td><code><a href="#dcterms:PeriodOfTime">Period of time</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a temporal period that the Dataset or the Dataset Series covers.</td>
+                        </tr>
+                        <tr>
+                           <td>theme</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#theme">dcat:theme</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a category of the Dataset or of the Dataset Series. A Dataset
+                              or a Dataset Series may be associated with multiple themes.</td>
+                        </tr>
+                        <tr>
+                           <td>title</td>
+                           <td><code><a href="http://purl.org/dc/terms/title">dcterms:title</a></code></td>
+                           <td><code>rdf:langString</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a name given to the Dataset or to the Dataset Series. This
+                              property can be repeated for parallel language versions of the name.</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                        <tr>
+                           <td>version</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#version">dcat:version</a></code></td>
+                           <td><code>xsd:string</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a version number or other version designation of the Dataset.</td>
+                        </tr>
+                        <tr>
+                           <td>version notes</td>
+                           <td><code><a href="http://www.w3.org/ns/adms#versionNotes">adms:versionNotes</a></code></td>
+                           <td><code>rdf:langString</code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a description of the differences between this version and a
+                              previous version of the Dataset. This property can be repeated for parallel language
+                              versions of the version notes.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcat:DatasetSeries">
+                  <h2 class="sp_section_title_table">Dataset Series</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: https://data.europarl.europa.eu/dataset/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>access rights</td>
+                           <td><code><a href="http://purl.org/dc/terms/accessRights">dcterms:accessRights</a></code></td>
+                           <td><code><a href="#dcterms:RightsStatement">RightsStatement</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to information that indicates whether the Dataset or the Dataset
+                              Series is public, has access restrictions or is not public. In DCAT-EP, this property
+                              takes as value the concept of the EU Vocabularies Access Rights Named Authority List:
+                              http://publications.europa.eu/resource/authority/access-right</td>
+                        </tr>
+                        <tr>
+                           <td>conforms to</td>
+                           <td><code><a href="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo</a></code></td>
+                           <td><code><a href="#dcterms:Standard">Standard</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to an implementing rule or other specification. In DCAT-EP, this
+                              property is used to specify the ontologies or application profiles used to represent
+                              the data (ORG-EP, ELI-EP, etc.). In case of conformance to multiple ontologies (e.g.,
+                              the ontologies used in application profiles), application profiles, and versions of
+                              them, this property can be repeated multiple times.</td>
+                        </tr>
+                        <tr>
+                           <td>contact point</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#contactPoint">dcat:contactPoint</a></code></td>
+                           <td><code><a href="#vcard:Kind">Kind</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains contact information that can be used for sending comments about
+                              the Dataset or the Dataset Series. Relevant contact information for the catalogued
+                              Dataset or Dataset Series. Use of vCard is recommended.</td>
+                        </tr>
+                        <tr>
+                           <td>creator</td>
+                           <td><code><a href="http://purl.org/dc/terms/creator">dcterms:creator</a></code></td>
+                           <td><code><a href="#foaf:Agent">Agent</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">The entity responsible for producing the Dataset or the Dataset Series.</td>
+                        </tr>
+                        <tr>
+                           <td>date copyrighted</td>
+                           <td><code><a href="http://purl.org/dc/terms/dateCopyrighted">dcterms:dateCopyrighted</a></code></td>
+                           <td><code>xsd:gYear</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Date of copyright of the Dataset or Dataset Series.</td>
+                        </tr>
+                        <tr>
+                           <td>description</td>
+                           <td><code><a href="http://purl.org/dc/terms/description">dcterms:description</a></code></td>
+                           <td><code>rdf:langString</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a free-text account of the Dataset or of the Dataset Series.
+                              This property can be repeated for parallel language versions of the description.</td>
+                        </tr>
+                        <tr>
+                           <td>frequency</td>
+                           <td><code><a href="http://purl.org/dc/terms/accrualPeriodicity">dcterms:accrualPeriodicity</a></code></td>
+                           <td><code><a href="#dcterms:Frequency">Frequency</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to the frequency at which the Dataset or a Dataset Series is
+                              updated. A Dataset Series is updated when any of its child Datasets is modified, added,
+                              or withdrawn.</td>
+                        </tr>
+                        <tr>
+                           <td>identifier</td>
+                           <td><code><a href="http://purl.org/dc/terms/identifier">dcterms:identifier</a></code></td>
+                           <td><code>xsd:anyURI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the main identifier for the Dataset, i.e., the identifier issued
+                              by the original publisher of the Dataset. It is the same URI of the Dataset itself,
+                              typed as an xsd:anyURI.</td>
+                        </tr>
+                        <tr>
+                           <td>in catalog</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#inCatalog">dcat:inCatalog</a></code></td>
+                           <td><code><a href="#dcat:Catalog">Catalog</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property links the Dataset or Dataset Series to the Catalogue listing it.</td>
+                        </tr>
+                        <tr>
+                           <td>issued</td>
+                           <td><code><a href="http://purl.org/dc/terms/issued">dcterms:issued</a></code></td>
+                           <td><code>xsd:dateTime</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the date of formal issuance (e.g., publication) of the Dataset
+                              or of the Dataset Series.</td>
+                        </tr>
+                        <tr>
+                           <td>language</td>
+                           <td><code><a href="http://purl.org/dc/terms/language">dcterms:language</a></code></td>
+                           <td><code><a href="#dcterms:LinguisticSystem">LinguisticSystem</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a language of the Dataset or of the Dataset Series. This property
+                              can be repeated if there are multiple languages in the Dataset.</td>
+                        </tr>
+                        <tr>
+                           <td>modified</td>
+                           <td><code><a href="http://purl.org/dc/terms/modified">dcterms:modified</a></code></td>
+                           <td><code>xsd:dateTime</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the most recent date on which the Dataset or the Dataset Series
+                              was modified. A Dataset Series is modified when any of its child Datasets is updated,
+                              added, or withdrawn.</td>
+                        </tr>
+                        <tr>
+                           <td>provenance</td>
+                           <td><code><a href="http://purl.org/dc/terms/provenance">dcterms:provenance</a></code></td>
+                           <td><code>dcterms:ProvenanceStatement</code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a statement about the lineage of a Dataset or a Dataset Series.</td>
+                        </tr>
+                        <tr>
+                           <td>publisher</td>
+                           <td><code><a href="http://purl.org/dc/terms/publisher">dcterms:publisher</a></code></td>
+                           <td><code><a href="#foaf:Agent">Agent</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to an entity (organisation) responsible for making the Dataset
+                              or the Dataset Series available.</td>
+                        </tr>
+                        <tr>
+                           <td>rights holder</td>
+                           <td><code><a href="http://purl.org/dc/terms/rightsHolder">dcterms:rightsHolder</a></code></td>
+                           <td><code><a href="#foaf:Agent">Agent</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">A person or organisation owning or managing rights over the Dataset or the Dataset
+                              Series.</td>
+                        </tr>
+                        <tr>
+                           <td>spatial coverage</td>
+                           <td><code><a href="http://purl.org/dc/terms/spatial">dcterms:spatial</a></code></td>
+                           <td><code><a href="#dcterms:Location">Location</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a geographic region that is covered by the Dataset or by the
+                              Dataset Series.</td>
+                        </tr>
+                        <tr>
+                           <td>subject</td>
+                           <td><code><a href="http://purl.org/dc/terms/subject">dcterms:subject</a></code></td>
+                           <td><code><a href="#skos:Concept">Concept</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a keyword or tag describing the Dataset or of the Dataset Series.
+                              In DCAT-AP, this property takes as value the concepts of the EuroVoc vocabulary: http://eurovoc.europa.eu/</td>
+                        </tr>
+                        <tr>
+                           <td>temporal coverage</td>
+                           <td><code><a href="http://purl.org/dc/terms/temporal">dcterms:temporal</a></code></td>
+                           <td><code><a href="#dcterms:PeriodOfTime">Period of time</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a temporal period that the Dataset or the Dataset Series covers.</td>
+                        </tr>
+                        <tr>
+                           <td>theme</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#theme">dcat:theme</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a category of the Dataset or of the Dataset Series. A Dataset
+                              or a Dataset Series may be associated with multiple themes.</td>
+                        </tr>
+                        <tr>
+                           <td>title</td>
+                           <td><code><a href="http://purl.org/dc/terms/title">dcterms:title</a></code></td>
+                           <td><code>rdf:langString</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a name given to the Dataset or to the Dataset Series. This
+                              property can be repeated for parallel language versions of the name.</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="euvoc:DatasetStatus">
+                  <h2 class="sp_section_title_table">Dataset Status</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: http://publications.europa.eu/resource/authority/dataset-status/.*$</li>
+                  </ul>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcat:Distribution">
+                  <h2 class="sp_section_title_table">Distribution</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: BlankNode</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>access URL</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#accessURL">dcat:accessURL</a></code></td>
+                           <td><code>rdfs:Resource</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">A URL of the resource that gives access to a Distribution of the Dataset. E.g. landing
+                              page, feed, SPARQL endpoint. dcat:accessURL SHOULD be used for the URL of a service
+                              or location that can provide access to this distribution, typically through a Web
+                              form, query or API call. dcat:downloadURL is preferred for direct links to downloadable
+                              resources. If the distribution(s) are accessible only through a landing page (i.e.
+                              direct download URLs are not known), then the landing page URL associated with the
+                              dcat:Dataset SHOULD be duplicated as access URL on a distribution. dcat:accessURL
+                              matches the property-chain dcat:accessService/dcat:endpointURL. In the RDF representation
+                              of DCAT this is axiomatized as an OWL property-chain axiom.</td>
+                        </tr>
+                        <tr>
+                           <td>byte size</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#byteSize">dcat:byteSize</a></code></td>
+                           <td><code>xsd:nonNegativeInteger</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the size of a Distribution in bytes.</td>
+                        </tr>
+                        <tr>
+                           <td>checksum</td>
+                           <td><code><a href="http://spdx.org/rdf/terms#checksum">spdx:checksum</a></code></td>
+                           <td><code>BlankNode</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property provides a mechanism that can be used to verify that the contents of
+                              a Distribution have not changed.</td>
+                        </tr>
+                        <tr>
+                           <td>conformsTo</td>
+                           <td><code><a href="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo</a></code></td>
+                           <td><code><a href="#dcterms:Standard">Standard</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to an established schema to which the described Distribution
+                              conforms. In DCAT-EP, this property is used to specify the ontologies or application
+                              profiles used to represent the data (ORG-EP, ELI-EP, etc.). In case of conformance
+                              to multiple ontologies (e.g., the ontologies used in application profiles), application
+                              profiles, and versions of them, this property can be repeated multiple times.</td>
+                        </tr>
+                        <tr>
+                           <td>description</td>
+                           <td><code><a href="http://purl.org/dc/terms/description">dcterms:description</a></code></td>
+                           <td><code>rdf:langString</code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a free-text account of the Resource. This property can be repeated
+                              for parallel language versions of the description.</td>
+                        </tr>
+                        <tr>
+                           <td>download URL</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#downloadURL">dcat:downloadURL</a></code></td>
+                           <td><code>rdfs:Resource</code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a URL that is a direct link to a downloadable file in a given
+                              format. The URL of the downloadable file in a given format. E.g. CSV file or RDF file.
+                              The format is indicated by the distribution’s dcterms:format and/or dcat:mediaType.
+                              dcat:downloadURL SHOULD be used for the URL at which this distribution is available
+                              directly, typically through a HTTP Get request.</td>
+                        </tr>
+                        <tr>
+                           <td>format</td>
+                           <td><code><a href="http://purl.org/dc/terms/format">dcterms:format</a></code></td>
+                           <td><code><a href="#dcterms:MediaTypeOrExtent">File Type</a></code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to the file format of the Distribution.</td>
+                        </tr>
+                        <tr>
+                           <td>language</td>
+                           <td><code><a href="http://purl.org/dc/terms/language">dcterms:language</a></code></td>
+                           <td><code><a href="#dcterms:LinguisticSystem">LinguisticSystem</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to a language used in the textual metadata describing titles,
+                              descriptions, etc. of the Datasets in the Catalog. This property can be repeated if
+                              the metadata is provided in multiple languages.</td>
+                        </tr>
+                        <tr>
+                           <td>licence</td>
+                           <td><code><a href="http://purl.org/dc/terms/license">dcterms:license</a></code></td>
+                           <td><code><a href="#dcterms:LicenseDocument">Licence Document</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the licence under which the Distribution is made available.</td>
+                        </tr>
+                        <tr>
+                           <td>media type</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#mediaType">dcat:mediaType</a></code></td>
+                           <td><code><a href="#dcterms:MediaType">Media Type</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to the media type of the Distribution.</td>
+                        </tr>
+                        <tr>
+                           <td>package format</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#packageFormat">dcat:packageFormat</a></code></td>
+                           <td><code><a href="#dcterms:MediaType">Media Type</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">The package format of the Distribution in which one or more data files are grouped
+                              together, e.g. to enable a set of related files to be downloaded together. This property
+                              to be used when the files in the Distribution are packaged, e.g. in a TAR file, a
+                              Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a
+                              media type as defined by IANA, if available.</td>
+                        </tr>
+                        <tr>
+                           <td>rights</td>
+                           <td><code><a href="http://purl.org/dc/terms/accessRights">dcterms:accessRights</a></code></td>
+                           <td><code><a href="#dcterms:RightsStatement">RightsStatement</a></code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property MAY include information regarding access or restrictions based on privacy,
+                              security, or other policies. Three options (:public, :restricted, :non-public)</td>
+                        </tr>
+                        <tr>
+                           <td>status</td>
+                           <td><code><a href="http://www.w3.org/ns/adms#status">adms:status</a></code></td>
+                           <td><code>euvoc:DatasetSatus</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property refers to the maturity of the Dataset. Values are concepts of EU Vocabularies
+                              Dataset Status Named Authority List: http://publications.europa.eu/resource/authority/dataset-status</td>
+                        </tr>
+                        <tr>
+                           <td>title</td>
+                           <td><code><a href="http://purl.org/dc/terms/title">dcterms:title</a></code></td>
+                           <td><code>rdf:langString</code><br></td>
+                           <td>
+                              <div style="width:30px">0..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains a name given to the Resource. This property can be repeated
+                              for parallel language versions of the name.</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="foaf:Document">
+                  <h2 class="sp_section_title_table">Document</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                  </ul>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcterms:MediaTypeOrExtent">
+                  <h2 class="sp_section_title_table">File Type</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: http://publications.europa.eu/resource/authority/file-type/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>in scheme</td>
+                           <td><code><a href="http://www.w3.org/2004/02/skos/core#inScheme">skos:inScheme</a></code></td>
+                           <td><code>op-aut:file-type</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property stating the concept scheme that a given resource is part of</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcterms:Frequency">
+                  <h2 class="sp_section_title_table">Frequency</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: http://publications.europa.eu/resource/authority/frequency/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>in scheme</td>
+                           <td><code><a href="http://www.w3.org/2004/02/skos/core#inScheme">skos:inScheme</a></code></td>
+                           <td><code>op-aut:frequency</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property stating the concept scheme that a given resource is part of</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="vcard:Kind">
+                  <h2 class="sp_section_title_table">Kind</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>URL</td>
+                           <td><code><a href="http://www.w3.org/2006/vcard/ns#hasURL">vcard:hasURL</a></code></td>
+                           <td><code>rdfs:Resource</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">A URL associated with an agent.</td>
+                        </tr>
+                        <tr>
+                           <td>formatted name</td>
+                           <td><code><a href="http://www.w3.org/2006/vcard/ns#hasFN">vcard:hasFN</a></code></td>
+                           <td><code>xsd:string</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">The formatted name of an agent.</td>
+                        </tr>
+                        <tr>
+                           <td>has email</td>
+                           <td><code><a href="http://www.w3.org/2006/vcard/ns#hasEmail">vcard:hasEmail</a></code></td>
+                           <td><code>rdfs:Resource</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">An email of an agent.</td>
+                        </tr>
+                        <tr>
+                           <td>organisation name</td>
+                           <td><code><a href="http://www.w3.org/2006/vcard/ns#organization-name">vcard:organization-name</a></code></td>
+                           <td><code>xsd:string</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">The name of the organisation associated with an agent.</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcterms:LicenseDocument">
+                  <h2 class="sp_section_title_table">Licence Document</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: https://www.europarl.europa.eu/legal-notice/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>in scheme</td>
+                           <td><code><a href="http://www.w3.org/2004/02/skos/core#inScheme">skos:inScheme</a></code></td>
+                           <td><code>op-aut:licence</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property stating the concept scheme that a given resource is part of</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcterms:LinguisticSystem">
+                  <h2 class="sp_section_title_table">LinguisticSystem</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: http://publications.europa.eu/resource/authority/language/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>in scheme</td>
+                           <td><code><a href="http://www.w3.org/2004/02/skos/core#inScheme">skos:inScheme</a></code></td>
+                           <td><code>op-aut:language</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property stating the concept scheme that a given resource is part of</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcterms:Location">
+                  <h2 class="sp_section_title_table">Location</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: http://publications.europa.eu/resource/authority/country/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>in scheme</td>
+                           <td><code><a href="http://www.w3.org/2004/02/skos/core#inScheme">skos:inScheme</a></code></td>
+                           <td><code>op-aut:country</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property stating the concept scheme that a given resource is part of</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcterms:MediaType">
+                  <h2 class="sp_section_title_table">Media Type</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: https://www.iana.org/assignments/media-types/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>in scheme</td>
+                           <td><code><a href="http://www.w3.org/2004/02/skos/core#inScheme">skos:inScheme</a></code></td>
+                           <td><code>https://www.iana.org/assignments/media-types/</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property stating the concept scheme that a given resource is part of</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcterms:PeriodOfTime">
+                  <h2 class="sp_section_title_table">Period of time</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: https://data.europarl.europa.eu/time-period/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>end date</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#endDate">dcat:endDate</a></code></td>
+                           <td><code>xsd:dateTime</code><br></td>
+                           <td>
+                              <div style="width:30px">0..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the end of the period.</td>
+                        </tr>
+                        <tr>
+                           <td>start date</td>
+                           <td><code><a href="http://www.w3.org/ns/dcat#startDate">dcat:startDate</a></code></td>
+                           <td><code>xsd:dateTime</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">This property contains the start of the period.</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcterms:RightsStatement">
+                  <h2 class="sp_section_title_table">RightsStatement</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: http://publications.europa.eu/resource/authority/access-right/.*$</li>
+                  </ul>
+                  <table class="sp_table_propertyshapes table-striped table-responsive">
+                     <thead>
+                        <tr>
+                           <th>Property name</th>
+                           <th>URI</th>
+                           <th>Expected value</th>
+                           <th>Card.</th>
+                           <th class="sp_description_column">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>in scheme</td>
+                           <td><code><a href="http://www.w3.org/2004/02/skos/core#inScheme">skos:inScheme</a></code></td>
+                           <td><code>op-aut:access-right</code><br></td>
+                           <td>
+                              <div style="width:30px">1..1</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property stating the concept scheme that a given resource is part of</td>
+                        </tr>
+                        <tr>
+                           <td>type</td>
+                           <td><code><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></code></td>
+                           <td><code>IRI</code><br></td>
+                           <td>
+                              <div style="width:30px">1..*</div>
+                           </td>
+                           <td class="sp_table_propertyshapes_col_description">Property that is used to state that a resource is an instance of a class</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="dcterms:Standard">
+                  <h2 class="sp_section_title_table">Standard</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                  </ul>
+               </section>
+            </div>
+         </div><br><div class="row mt-3">
+            <div class="col">
+               <section id="euvoc:DatasetTheme">
+                  <h2 class="sp_section_title_table">Theme</h2>
+                  <ul class="sp_list_description_properties sp_ul">
+                     <li>Closed shape</li>
+                     <li>Nodes: IRI</li>
+                     <li>URI: http://publications.europa.eu/resource/authority/data-theme/.*$</li>
+                  </ul>
+               </section>
+            </div>
+         </div><br></div><script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js">//</script><script>				
+					anchors.options = {
+//	                    icon: '#'
+	                    icon: '§',
+						visible:'always',
+						class:'self-link'
+	                  };
+               		anchors.options.placement = 'left';
+//					anchors.add();		
+					anchors.add().remove('header h2, #abstract, #usage-note, .toc h2');
+				</script></body>
+</html>
