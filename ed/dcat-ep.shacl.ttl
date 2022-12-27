@@ -49,8 +49,8 @@
   adms:versionNotes """Changes since DCAT-EP version 0.3 (https://data.europarl.europa.eu/def/dcat-ep/ed/):
 - Editorial fixes.
 - Replaced op-aut:dataset-theme with op-aut:data-theme - see Issue https://github.com/europarl/dcat-ep/issues/15
-- Properties for euvoc:DatasetTheme were wrongly specified on foaf:Agent: fixed - see Issue https://github.com/europarl/dcat-ep/issues/13
 - Properties for euvoc:DatasetStatus were wrongly specified on foaf:Agent: fixed - see Issue https://github.com/europarl/dcat-ep/issues/14
+- Properties for euvoc:DatasetTheme were wrongly specified on foaf:Agent: fixed - see Issue https://github.com/europarl/dcat-ep/issues/13
 - Replaced rdfs:Standard with dcterms:Standard in dcat:DataService - see Issue https://github.com/europarl/dcat-ep/issues/12
 - Added sh:uniqueLang constraint to adms:versionNotes - see Issue https://github.com/europarl/dcat-ep/issues/11
 - Removed unnecessary skos:Concept's - see Issue https://github.com/europarl/dcat-ep/issues/6
