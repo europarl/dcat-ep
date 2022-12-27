@@ -1,0 +1,1446 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix eli-dl: <http://data.europa.eu/eli/eli-draft-legislation-ontology#> .
+@prefix epsh: <https://data.europarl.europa.eu/def/dcat-ep#> .
+@prefix epvoc: <https://data.europarl.europa.eu/def/epvoc#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix op-aut: <http://publications.europa.eu/resource/authority/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.europarl.europa.eu/def/dcat-ep#> a owl:Ontology, adms:Asset;
+  dcterms:abstract "DCAT-EP is an extension of the DCAT Application Profile for European data portals (DCAT-AP), designed and used for documenting datasets and data services of the European Parliament."@en;
+  dcterms:conformsTo <https://www.w3.org/TR/shacl>;
+  dcterms:created "2022-05-19"^^xsd:date;
+  dcterms:creator <http://publications.europa.eu/resource/dataset/corporate-body/EP>;
+  dcterms:dateCopyrighted "2022"^^xsd:gYear;
+  dcterms:description "DCAT-EP is an extension of the DCAT Application Profile for European data portals (DCAT-AP), designed and used for documenting datasets and data services of the European Parliament."@en;
+  dcterms:issued "2022-10-10"^^xsd:date;
+  dcterms:license <https://www.europarl.europa.eu/legal-notice/>;
+  dcterms:modified "2022-12-27"^^xsd:date;
+  dcterms:publisher <http://publications.europa.eu/resource/dataset/corporate-body/EP>;
+  dcterms:rightsHolder <http://publications.europa.eu/resource/dataset/corporate-body/EURUN>;
+  dcterms:title "DCAT-EP Application Profile"@en;
+  dcterms:type <http://publications.europa.eu/resource/authority/dataset-type/APROF>;
+  vann:usageNote "This version of DCAT-EP is a draft specification and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress."@en;
+  doap:repository <https://github.com/europarl/dcat-ep>;
+  owl:versionIRI <https://data.europarl.europa.eu/def/dcat-ep/ed/>;
+  owl:versionInfo "Editor's Draft";
+  adms:status <http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP>;
+  adms:versionNotes """Changes since DCAT-EP version 0.3 (https://data.europarl.europa.eu/def/dcat-ep/ed/):
+- Editorial fixes.
+- Replaced op-aut:dataset-theme with op-aut:data-theme - see Issue https://github.com/europarl/dcat-ep/issues/15
+- Properties for euvoc:DatasetTheme were wrongly specified on foaf:Agent: fixed - see Issue https://github.com/europarl/dcat-ep/issues/13
+- Properties for euvoc:DatasetStatus were wrongly specified on foaf:Agent: fixed - see Issue https://github.com/europarl/dcat-ep/issues/14
+- Replaced rdfs:Standard with dcterms:Standard in dcat:DataService - see Issue https://github.com/europarl/dcat-ep/issues/12
+- Added sh:uniqueLang constraint to adms:versionNotes - see Issue https://github.com/europarl/dcat-ep/issues/11
+- Removed unnecessary skos:Concept's - see Issue https://github.com/europarl/dcat-ep/issues/6
+- Fixed max cardinality of dcat:hasVersion - see Issue https://github.com/europarl/dcat-ep/issues/10"""@en;
+  foaf:depiction <https://europarl.github.io/dcat-ep/ed/dcat-ep.svg> .
+
+dcat:Catalog a rdfs:Class, sh:NodeShape;
+  rdfs:label "Catalog"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96666 .
+
+_:node1gfl9t51rx96666 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcat:Catalog sh:nodeKind sh:IRI;
+  sh:order 1;
+  sh:pattern "https://data.europarl.europa.eu/catalogue/.*$";
+  sh:property epsh:P10, epsh:P11, epsh:P12, epsh:P13, epsh:P14, epsh:P15, epsh:P16,
+    epsh:P17, epsh:P18, epsh:P19, epsh:P20, epsh:P21, epsh:P22, epsh:P23, epsh:P24, epsh:P25,
+    epsh:P26, epsh:P27, epsh:P28, epsh:P29, epsh:P30, epsh:P9 .
+
+dcat:CatalogRecord a rdfs:Class, sh:NodeShape;
+  rdfs:label "Catalog Record"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96667 .
+
+_:node1gfl9t51rx96667 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcat:CatalogRecord sh:nodeKind sh:IRI;
+  sh:order 2;
+  sh:pattern "https://data.europarl.europa.eu/record/.*$";
+  sh:property epsh:P33, epsh:P34, epsh:P35, epsh:P36, epsh:P37, epsh:P38 .
+
+dcat:DataService a rdfs:Class, sh:NodeShape;
+  rdfs:label "Data Service"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96668 .
+
+_:node1gfl9t51rx96668 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcat:DataService sh:nodeKind sh:IRI;
+  sh:order 3;
+  sh:pattern "https://data.europarl.europa.eu/service/.*$";
+  sh:property epsh:P41, epsh:P42, epsh:P43, epsh:P44, epsh:P45, epsh:P46, epsh:P47,
+    epsh:P48, epsh:P49, epsh:P50, epsh:P51, epsh:P52, epsh:P53, epsh:P54, epsh:P55, epsh:P56,
+    epsh:P57, epsh:P58, epsh:P59 .
+
+dcat:DatasetSeries a rdfs:Class, sh:NodeShape;
+  rdfs:label "Dataset Series"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96669 .
+
+_:node1gfl9t51rx96669 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcat:DatasetSeries sh:nodeKind sh:IRI;
+  sh:order 4;
+  sh:pattern "https://data.europarl.europa.eu/dataset/.*$";
+  sh:property epsh:P62, epsh:P63, epsh:P64, epsh:P65, epsh:P66, epsh:P67, epsh:P68,
+    epsh:P70, epsh:P71, epsh:P72, epsh:P73, epsh:P74, epsh:P75, epsh:P76, epsh:P77, epsh:P78,
+    epsh:P80, epsh:P81, epsh:P83, epsh:P88, epsh:P89 .
+
+dcat:Dataset a rdfs:Class, sh:NodeShape;
+  rdfs:label "Dataset"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96670 .
+
+_:node1gfl9t51rx96670 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcat:Dataset sh:nodeKind sh:IRI;
+  sh:order 5;
+  sh:pattern "https://data.europarl.europa.eu/dataset/.*$";
+  sh:property epsh:P62, epsh:P63, epsh:P64, epsh:P65, epsh:P66, epsh:P67, epsh:P68,
+    epsh:P69, epsh:P70, epsh:P71, epsh:P72, epsh:P73, epsh:P74, epsh:P75, epsh:P76, epsh:P77,
+    epsh:P78, epsh:P79, epsh:P80, epsh:P81, epsh:P82, epsh:P83, epsh:P84, epsh:P85, epsh:P86,
+    epsh:P87, epsh:P88, epsh:P89, epsh:P90, epsh:P91, epsh:P92, epsh:P93, epsh:P94, epsh:P95 .
+
+dcat:Distribution a rdfs:Class, sh:NodeShape;
+  rdfs:label "Distribution"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96671 .
+
+_:node1gfl9t51rx96671 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcat:Distribution sh:nodeKind sh:BlankNode;
+  sh:order 6;
+  sh:property epsh:P100, epsh:P101, epsh:P102, epsh:P103, epsh:P104, epsh:P105, epsh:P106,
+    epsh:P107, epsh:P108, epsh:P109, epsh:P110, epsh:P111, epsh:P112, epsh:P98, epsh:P99 .
+
+dcterms:PeriodOfTime a rdfs:Class, sh:NodeShape;
+  rdfs:label "Period of time"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96672 .
+
+_:node1gfl9t51rx96672 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcterms:PeriodOfTime sh:nodeKind sh:IRI;
+  sh:order 7;
+  sh:pattern "https://data.europarl.europa.eu/time-period/.*$";
+  sh:property epsh:P115, epsh:P116, epsh:P117 .
+
+spdx:Checksum a rdfs:Class, sh:NodeShape;
+  rdfs:label "Checksum"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96673 .
+
+_:node1gfl9t51rx96673 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+spdx:Checksum sh:nodeKind sh:BlankNode;
+  sh:order 8;
+  sh:property epsh:P121, epsh:P122, epsh:P123 .
+
+vcard:Kind a rdfs:Class, sh:NodeShape;
+  rdfs:label "Kind"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96674 .
+
+_:node1gfl9t51rx96674 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+vcard:Kind sh:nodeKind sh:IRI;
+  sh:order 9;
+  sh:property epsh:P127, epsh:P128, epsh:P129, epsh:P130, epsh:P131 .
+
+skos:Concept a rdfs:Class, sh:NodeShape;
+  rdfs:label "Concept"@en;
+  owl:versionInfo "v0.3";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96675 .
+
+_:node1gfl9t51rx96675 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+skos:Concept sh:nodeKind sh:IRI;
+  sh:order 10;
+  sh:property epsh:P172 .
+
+skos:ConceptScheme a rdfs:Class, sh:NodeShape;
+  rdfs:label "Concept Scheme"@en;
+  owl:versionInfo "v0.4";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96676 .
+
+_:node1gfl9t51rx96676 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+skos:ConceptScheme sh:nodeKind sh:IRI;
+  sh:order 11 .
+
+foaf:Document a rdfs:Class, sh:NodeShape;
+  rdfs:label "Document"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96677 .
+
+_:node1gfl9t51rx96677 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+foaf:Document sh:nodeKind sh:IRI;
+  sh:order 12 .
+
+dcterms:Standard a rdfs:Class, sh:NodeShape;
+  rdfs:label "Standard"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96678 .
+
+_:node1gfl9t51rx96678 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcterms:Standard sh:nodeKind sh:IRI;
+  sh:order 13 .
+
+foaf:Agent a rdfs:Class, sh:NodeShape;
+  rdfs:label "Agent"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96679 .
+
+_:node1gfl9t51rx96679 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+foaf:Agent sh:nodeKind sh:IRI;
+  sh:order 14;
+  sh:pattern "http://publications.europa.eu/resource/authority/corporate-body/.*$";
+  sh:property epsh:P134, epsh:P135 .
+
+dcterms:LicenseDocument a rdfs:Class, sh:NodeShape;
+  rdfs:label "Licence Document"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96680 .
+
+_:node1gfl9t51rx96680 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcterms:LicenseDocument sh:nodeKind sh:IRI;
+  sh:order 15;
+  sh:pattern "https://www.europarl.europa.eu/legal-notice/.*$";
+  sh:property epsh:P140, epsh:P141 .
+
+dcterms:Location a rdfs:Class, sh:NodeShape;
+  rdfs:label "Location"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96681 .
+
+_:node1gfl9t51rx96681 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcterms:Location sh:nodeKind sh:IRI;
+  sh:order 16;
+  sh:pattern "http://publications.europa.eu/resource/authority/country/.*$";
+  sh:property epsh:P144, epsh:P145 .
+
+dcterms:LinguisticSystem a rdfs:Class, sh:NodeShape;
+  rdfs:label "Linguistic System"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96682 .
+
+_:node1gfl9t51rx96682 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcterms:LinguisticSystem sh:nodeKind sh:IRI;
+  sh:order 17;
+  sh:pattern "http://publications.europa.eu/resource/authority/language/.*$";
+  sh:property epsh:P148, epsh:P149 .
+
+dcterms:RightsStatement a rdfs:Class, sh:NodeShape;
+  rdfs:label "Rights Statement"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96683 .
+
+_:node1gfl9t51rx96683 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcterms:RightsStatement sh:nodeKind sh:IRI;
+  sh:order 18;
+  sh:pattern "http://publications.europa.eu/resource/authority/access-right/.*$";
+  sh:property epsh:P152, epsh:P153 .
+
+dcterms:MediaType a rdfs:Class, sh:NodeShape;
+  rdfs:label "Media Type"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96684 .
+
+_:node1gfl9t51rx96684 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcterms:MediaType sh:nodeKind sh:IRI;
+  sh:order 19;
+  sh:pattern "https://www.iana.org/assignments/media-types/.*$";
+  sh:property epsh:P164, epsh:P165 .
+
+dcterms:Frequency a rdfs:Class, sh:NodeShape;
+  rdfs:label "Frequency"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96685 .
+
+_:node1gfl9t51rx96685 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcterms:Frequency sh:nodeKind sh:IRI;
+  sh:order 20;
+  sh:pattern "http://publications.europa.eu/resource/authority/frequency/.*$";
+  sh:property epsh:P156, epsh:P157 .
+
+dcterms:MediaTypeOrExtent a rdfs:Class, sh:NodeShape;
+  rdfs:label "File Type"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96686 .
+
+_:node1gfl9t51rx96686 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+dcterms:MediaTypeOrExtent sh:nodeKind sh:IRI;
+  sh:order 21;
+  sh:pattern "http://publications.europa.eu/resource/authority/file-type/.*$";
+  sh:property epsh:P160, epsh:P161 .
+
+euvoc:DatasetTheme a rdfs:Class, sh:NodeShape;
+  rdfs:label "Theme"@en;
+  owl:versionInfo "v0.2";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96687 .
+
+_:node1gfl9t51rx96687 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+euvoc:DatasetTheme sh:nodeKind sh:IRI;
+  sh:order 22;
+  sh:pattern "http://publications.europa.eu/resource/authority/data-theme/.*$";
+  sh:property epsh:P168, epsh:P169 .
+
+euvoc:DatasetStatus a rdfs:Class, sh:NodeShape;
+  rdfs:label "Dataset Status"@en;
+  owl:versionInfo "v0.4";
+  sh:closed true;
+  sh:ignoredProperties _:node1gfl9t51rx96688 .
+
+_:node1gfl9t51rx96688 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+euvoc:DatasetStatus sh:nodeKind sh:IRI;
+  sh:order 23;
+  sh:pattern "http://publications.europa.eu/resource/authority/dataset-status/.*$";
+  sh:property epsh:P175, epsh:P176 .
+
+epsh:P9 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P10 owl:versionInfo "v0.3";
+  sh:datatype rdf:langString;
+  sh:description "This property contains a name given to the Catalogue. This property can be repeated for parallel language versions of the name.";
+  sh:minCount 1;
+  sh:name "title"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:title;
+  sh:uniqueLang true .
+
+epsh:P11 owl:versionInfo "v0.3";
+  sh:datatype xsd:anyUri;
+  sh:description "This property contains the main identifier for the Catalogue, i.e., the identifier issued by the original publisher of the Catalogue. It is the same URI of the Catalogue itself, typed as an xsd:anyURI.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "identifier"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:identifier .
+
+epsh:P12 owl:versionInfo "v0.3";
+  sh:datatype rdf:langString;
+  sh:description "This property contains a free-text account of the Catalogue.This property can be repeated for parallel language versions of the name.";
+  sh:minCount 1;
+  sh:name "description"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:description;
+  sh:uniqueLang true .
+
+epsh:P13 owl:versionInfo "v0.2";
+  sh:description "This property refers to an entity (organisation) responsible for making the Catalogue available.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "publisher"@en;
+  sh:node foaf:Agent;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:publisher .
+
+epsh:P14 owl:versionInfo "v0.3";
+  sh:description "This property links the Catalogue with a Dataset that is part of the Catalogue.";
+  sh:name "dataset"@en;
+  sh:nodeKind sh:IRI;
+  sh:or _:node1gfl9t51rx96691 .
+
+_:node1gfl9t51rx96691 rdf:first _:node1gfl9t51rx96692 .
+
+_:node1gfl9t51rx96692 sh:node dcat:Dataset .
+
+_:node1gfl9t51rx96691 rdf:rest _:node1gfl9t51rx96693 .
+
+_:node1gfl9t51rx96693 rdf:first _:node1gfl9t51rx96694 .
+
+_:node1gfl9t51rx96694 sh:node dcat:DatasetSeries .
+
+_:node1gfl9t51rx96693 rdf:rest rdf:nil .
+
+epsh:P14 sh:path dcat:dataset .
+
+epsh:P15 owl:versionInfo "v0.2";
+  sh:datatype xsd:string;
+  sh:description "This property refers to the version number of Catalogue.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "version"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcat:version .
+
+epsh:P16 owl:versionInfo "v0.2";
+  sh:description "This property refers to a Catalogue Record that is part of the Catalogue.";
+  sh:name "record"@en;
+  sh:node dcat:CatalogRecord;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:record .
+
+epsh:P17 owl:versionInfo "v0.2";
+  sh:description "This property refers to a site or end-point that is listed in the Catalogue.";
+  sh:name "service"@en;
+  sh:node dcat:DataService;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:service .
+
+epsh:P18 owl:versionInfo "v0.3";
+  sh:description "This property refers to the license under which the Catalogue metadata can be used or reused.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "licence"@en;
+  sh:node dcterms:LicenseDocument;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:license .
+
+epsh:P19 owl:versionInfo "v0.3";
+  sh:description "This property refers to information that indicates whether the Catalogue is public, has access restrictions or is not public. In DCAT-EP, this property takes as value the concept of the EU Vocabularies Access Rights Named Authority List: http://publications.europa.eu/resource/authority/access-right";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "access rights"@en;
+  sh:node dcterms:RightsStatement;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:accessRights .
+
+epsh:P20 owl:versionInfo "v0.3";
+  sh:datatype xsd:dateTime;
+  sh:description "This property contains the date of formal issuance (e.g., publication) of the Catalogue.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "release date"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:issued .
+
+epsh:P21 owl:versionInfo "v0.2";
+  sh:datatype xsd:dateTime;
+  sh:description "This property contains the most recent date on which the Catalogue was modified.";
+  sh:maxCount 1;
+  sh:name "update / modification date"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:modified .
+
+epsh:P22 owl:versionInfo "v0.2";
+  sh:description "This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Datasets in the Catalogue. This property can be repeated if the metadata is provided in multiple languages.";
+  sh:name "language"@en;
+  sh:node dcterms:LinguisticSystem;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:language .
+
+epsh:P23 owl:versionInfo "v0.3";
+  sh:description "This property refers to a knowledge organisation system used to classify the Catalogue's Datasets. Values are concepts of the op-aut:data-theme vocabulary.";
+  sh:name "themes"@en;
+  sh:node skos:ConceptScheme;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:themeTaxonomy .
+
+epsh:P24 owl:versionInfo "v0.2";
+  sh:description "This property refers to a web page that acts as the main page for the Catalogue (a public Web document usually available in HTML). foaf:homepage is an inverse functional property (IFP) which means that it MUST be unique and precisely identify the Web-page for the resource.";
+  sh:maxCount 1;
+  sh:name "homepage"@en;
+  sh:node foaf:Document;
+  sh:nodeKind sh:IRI;
+  sh:path foaf:homepage .
+
+epsh:P25 owl:versionInfo "v0.2";
+  sh:description "This property refers to a geographic region that is covered by the Catalogue.";
+  sh:name "spatial / geographic"@en;
+  sh:node dcterms:Location;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:spatial .
+
+epsh:P26 owl:versionInfo "v0.3";
+  sh:description "This property refers to an ontology or application profile that the Catalogue conforms to - i.e., to the ontologies or application profiles used for the contained Catalogue Records. In case of conformance to multiple ontologies (e.g., DCAT-EP is a profile of DCAT), application profiles (e.g., DCAT-EP is a profile of DCAT-AP), and versions of them, this property can be repeated multiple times.";
+  sh:name "application profile"@en;
+  sh:node dcterms:Standard;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:conformsTo .
+
+epsh:P27 owl:versionInfo "v0.3";
+  sh:description "The entity responsible for producing the Catalogue.";
+  sh:minCount 1;
+  sh:name "creator"@en;
+  sh:node foaf:Agent;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:creator .
+
+epsh:P28 owl:versionInfo "v0.3";
+  sh:description "A person or organisation owning or managing rights over the Catalogue.";
+  sh:minCount 1;
+  sh:name "rights holder"@en;
+  sh:node foaf:Agent;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:rightsHolder .
+
+epsh:P29 owl:versionInfo "v0.3";
+  sh:datatype xsd:gYear;
+  sh:description "Date of copyright of the Catalogue.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "date copyrighted"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:dateCopyrighted .
+
+epsh:P30 owl:versionInfo "v0.3";
+  sh:description "The frequency with which the Catalogue is updated. A Catalogue is updated when the contained Catalogue Records are modified, added, or withdrawn.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "accrual periodicity"@en;
+  sh:path dcterms:accrualPeriodicity .
+
+epsh:P33 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P34 owl:versionInfo "v0.2";
+  sh:description "This property links the Catalogue Record to the resource (Dataset, Dataset Series, etc.) described in the record.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "primary topic"@en;
+  sh:nodeKind sh:IRI;
+  sh:or _:node1gfl9t51rx96695 .
+
+_:node1gfl9t51rx96695 rdf:first _:node1gfl9t51rx96696 .
+
+_:node1gfl9t51rx96696 sh:node dcat:Catalog .
+
+_:node1gfl9t51rx96695 rdf:rest _:node1gfl9t51rx96697 .
+
+_:node1gfl9t51rx96697 rdf:first _:node1gfl9t51rx96698 .
+
+_:node1gfl9t51rx96698 sh:node dcat:Dataset .
+
+_:node1gfl9t51rx96697 rdf:rest _:node1gfl9t51rx96699 .
+
+_:node1gfl9t51rx96699 rdf:first _:node1gfl9t51rx96700 .
+
+_:node1gfl9t51rx96700 sh:node dcat:DatasetSeries .
+
+_:node1gfl9t51rx96699 rdf:rest _:node1gfl9t51rx96701 .
+
+_:node1gfl9t51rx96701 rdf:first _:node1gfl9t51rx96702 .
+
+_:node1gfl9t51rx96702 sh:node dcat:DataService .
+
+_:node1gfl9t51rx96701 rdf:rest rdf:nil .
+
+epsh:P34 sh:path foaf:primaryTopic .
+
+epsh:P35 owl:versionInfo "v0.2";
+  sh:datatype xsd:dateTime;
+  sh:description "This property contains the most recent date on which the Catalogue Record was changed or modified.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "update / modification date"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:modified .
+
+epsh:P36 owl:versionInfo "v0.2";
+  sh:description "This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Catalogue Record. This property can be repeated if the metadata is provided in multiple languages";
+  sh:name "language"@en;
+  sh:node dcterms:LinguisticSystem;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:language .
+
+epsh:P37 owl:versionInfo "v0.3";
+  sh:datatype xsd:dateTime;
+  sh:description "This property contains the date on which the Catalogue Record was published.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "listing date"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:issued .
+
+epsh:P38 owl:versionInfo "v0.3";
+  sh:description "This property refers to an ontology or application profile that the Catalogue Record conforms to. In case of conformance to multiple ontologies (e.g., DCAT-EP is a profile of DCAT), application profiles (e.g., DCAT-EP is a profile of DCAT-AP), and versions of them, this property can be repeated multiple times.";
+  sh:name "application profile"@en;
+  sh:node dcterms:Standard;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:conformsTo .
+
+epsh:P41 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P42 owl:versionInfo "v0.3";
+  sh:datatype rdf:langString;
+  sh:description "This property contains a name given to the Data Service. This property can be repeated for parallel language versions of the name.";
+  sh:minCount 1;
+  sh:name "title"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:title;
+  sh:uniqueLang true .
+
+epsh:P43 owl:versionInfo "v0.2";
+  sh:description "The root location or primary endpoint of the service (an IRI).";
+  sh:minCount 1;
+  sh:name "endpoint URL"@en;
+  sh:node rdfs:Resource;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:endpointURL .
+
+epsh:P44 owl:versionInfo "v0.2";
+  sh:description "This property contains a description of the services available via the end-points, including their operations, parameters etc. The property gives specific details of the actual endpoint instances, while dcterms:conformsTo is used to indicate the general standard or specification that the endpoints implement. An endpoint description may be expressed in a machine-readable form.";
+  sh:minCount 1;
+  sh:name "endpoint description"@en;
+  sh:node rdfs:Resource;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:endpointDescription .
+
+epsh:P45 owl:versionInfo "v0.2";
+  sh:description "Indicates to which Dataset the Data Service is related to.";
+  sh:minCount 1;
+  sh:name "serves dataset"@en;
+  sh:node dcat:Dataset;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:servesDataset .
+
+epsh:P46 owl:versionInfo "v0.2";
+  sh:description "This property refers to an entity (organisation) responsible for making the Data Service available.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "publisher"@en;
+  sh:node foaf:Agent;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:publisher .
+
+epsh:P47 owl:versionInfo "v0..3";
+  sh:datatype rdf:langString;
+  sh:description "This property contains a free-text account of the Data Service. This property can be repeated for parallel language versions of the description.";
+  sh:name "description"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:description;
+  sh:uniqueLang true .
+
+epsh:P48 owl:versionInfo "v0.3";
+  sh:description "This property refers to information that indicates whether the Data Service is public, has access restrictions or is not public. In DCAT-EP, this property takes as value the concept of the EU Vocabularies Access Rights Named Authority List: http://publications.europa.eu/resource/authority/access-right";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "access rights"@en;
+  sh:node dcterms:RightsStatement;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:accessRights .
+
+epsh:P49 owl:versionInfo "v0.4";
+  sh:description "This property refer to an established standard to which the Data Service conforms to. In case of conformance to multiple standards, and versions of them, this property can be repeated multiple times.";
+  sh:name "conforms to"@en;
+  sh:node dcterms:Standard;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:conformsTo .
+
+epsh:P50 owl:versionInfo "v0.2";
+  sh:description "This property contains a keyword or tag describing the Data Service. Values are concept of Eurovoc vocabulary: http://eurovoc.europa.eu/";
+  sh:name "subject"@en;
+  sh:node skos:Concept;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:subject .
+
+epsh:P51 owl:versionInfo "v0.2";
+  sh:datatype xsd:string;
+  sh:description "This property refers to the version number of a Data Service.";
+  sh:maxCount 1;
+  sh:name "version info"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcat:version .
+
+epsh:P52 owl:versionInfo "v0.3";
+  sh:description "This property refers to a category of the Data Service. A Data Service may be associated with multiple themes. Values are concepts of the op-aut:data-theme vocabulary.";
+  sh:name "theme"@en;
+  sh:nodeKind sh:IRI;
+  sh:or _:node1gfl9t51rx96703 .
+
+_:node1gfl9t51rx96703 rdf:first _:node1gfl9t51rx96704 .
+
+_:node1gfl9t51rx96704 sh:node skos:Concept .
+
+_:node1gfl9t51rx96703 rdf:rest _:node1gfl9t51rx96705 .
+
+_:node1gfl9t51rx96705 rdf:first _:node1gfl9t51rx96706 .
+
+_:node1gfl9t51rx96706 sh:node euvoc:DataTheme .
+
+_:node1gfl9t51rx96705 rdf:rest rdf:nil .
+
+epsh:P52 sh:path dcat:theme .
+
+epsh:P53 owl:versionInfo "v0.3";
+  sh:description "This property contains the licence under which the Data Service is made available.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "licence"@en;
+  sh:node dcterms:LicenseDocument;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:license .
+
+epsh:P54 owl:versionInfo "v0.3";
+  sh:description "This property contains contact information that can be used for sending comments about the Data Service. Relevant contact information for the cataloged Data Service. Use of vCard is recommended.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "contact point"@en;
+  sh:node vcard:Kind;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:contactPoint .
+
+epsh:P55 owl:versionInfo "v0.3";
+  sh:datatype xsd:anyUri;
+  sh:description "This property contains the main identifier for the Data Service, i.e., the identifier issued by the original publisher of the Data Service. It is the same URI of the Data Service itself, typed as an xsd:anyURI.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "identifier"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:identifier .
+
+epsh:P56 owl:versionInfo "v0.3";
+  sh:datatype xsd:dateTime;
+  sh:description "This property contains the date of formal issuance (e.g., publication) of the Data Service.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "release date"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:issued .
+
+epsh:P57 owl:versionInfo "v0.2";
+  sh:datatype xsd:dateTime;
+  sh:description "This property contains the most recent date on which the Data Service was modified.";
+  sh:maxCount 1;
+  sh:name "update / modification date"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:modified .
+
+epsh:P58 owl:versionInfo "v0.3";
+  sh:description "This property links the Data Service to the Catalogue listing it.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "in catalog"@en;
+  sh:node dcat:Catalog;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:inCatalog .
+
+epsh:P59 owl:versionInfo "v0.2";
+  sh:description "This property refers to the file formats availabe for the API response.";
+  sh:name "format"@en;
+  sh:node dcterms:MediaTypeOrExtent;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:format .
+
+epsh:P62 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P63 owl:versionInfo "v0.3";
+  sh:datatype rdf:langString;
+  sh:description "This property contains a name given to the Dataset or to the Dataset Series. This property can be repeated for parallel language versions of the name.";
+  sh:minCount 1;
+  sh:name "title"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:title;
+  sh:uniqueLang true .
+
+epsh:P64 owl:versionInfo "v0.3";
+  sh:datatype rdf:langString;
+  sh:description "This property contains a free-text account of the Dataset or of the Dataset Series. This property can be repeated for parallel language versions of the description.";
+  sh:minCount 1;
+  sh:name "description"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:description;
+  sh:uniqueLang true .
+
+epsh:P65 owl:versionInfo "v0.3";
+  sh:datatype xsd:anyURI;
+  sh:description "This property contains the main identifier for the Dataset, i.e., the identifier issued by the original publisher of the Dataset. It is the same URI of the Dataset itself, typed as an xsd:anyURI.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "identifier"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:identifier .
+
+epsh:P66 owl:versionInfo "v0.2";
+  sh:description "This property refers to an entity (organisation) responsible for making the Dataset or the Dataset Series available.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "publisher"@en;
+  sh:node foaf:Agent;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:publisher .
+
+epsh:P67 owl:versionInfo "v0.2";
+  sh:description "This property refers to a language of the Dataset or of the Dataset Series. This property can be repeated if there are multiple languages in the Dataset.";
+  sh:minCount 1;
+  sh:name "language"@en;
+  sh:node dcterms:LinguisticSystem;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:language .
+
+epsh:P68 owl:versionInfo "v0.2";
+  sh:description "This property refers to a category of the Dataset or of the Dataset Series. A Dataset or a Dataset Series may be associated with multiple themes.";
+  sh:minCount 1;
+  sh:name "theme"@en;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:theme .
+
+epsh:P69 owl:versionInfo "v0.2";
+  sh:description "This property refers to a Dataset Series of which the Dataset is part.";
+  sh:name "in series"@en;
+  sh:node dcat:DatasetSeries;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:inSeries .
+
+epsh:P70 owl:versionInfo "v0.3";
+  sh:description "The entity responsible for producing the Dataset or the Dataset Series.";
+  sh:minCount 1;
+  sh:name "creator"@en;
+  sh:node foaf:Agent;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:creator .
+
+epsh:P71 owl:versionInfo "v0.3";
+  sh:description "A person or organisation owning or managing rights over the Dataset or the Dataset Series.";
+  sh:minCount 1;
+  sh:name "rights holder"@en;
+  sh:node foaf:Agent;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:rightsHolder .
+
+epsh:P72 owl:versionInfo "v0.3";
+  sh:datatype xsd:gYear;
+  sh:description "Date of copyright of the Dataset or Dataset Series.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "date copyrighted"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:dateCopyrighted .
+
+epsh:P73 owl:versionInfo "v0.3";
+  sh:description "This property links the Dataset or Dataset Series to the Catalogue listing it.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "in catalog"@en;
+  sh:node dcat:Catalog;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:inCatalog .
+
+epsh:P74 owl:versionInfo "v0.2";
+  sh:description "This property contains a keyword or tag describing the Dataset or of the Dataset Series. In DCAT-AP, this property takes as value the concepts of the EuroVoc vocabulary: http://eurovoc.europa.eu/";
+  sh:name "subject"@en;
+  sh:node skos:Concept;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:subject .
+
+epsh:P75 owl:versionInfo "v0.3";
+  sh:datatype xsd:dateTime;
+  sh:description "This property contains the date of formal issuance (e.g., publication) of the Dataset or of the Dataset Series.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "issued"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:issued .
+
+epsh:P76 owl:versionInfo "v0.2";
+  sh:datatype xsd:dateTime;
+  sh:description "This property contains the most recent date on which the Dataset or the Dataset Series was modified. A Dataset Series is modified when any of its child Datasets is updated, added, or withdrawn.";
+  sh:maxCount 1;
+  sh:name "modified"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:modified .
+
+epsh:P77 owl:versionInfo "v0.3";
+  sh:description "This property refers to information that indicates whether the Dataset or the Dataset Series is public, has access restrictions or is not public. In DCAT-EP, this property takes as value the concept of the EU Vocabularies Access Rights Named Authority List: http://publications.europa.eu/resource/authority/access-right";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "access rights"@en;
+  sh:node dcterms:RightsStatement;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:accessRights .
+
+epsh:P78 owl:versionInfo "v0.3";
+  sh:description "This property contains contact information that can be used for sending comments about the Dataset or the Dataset Series. Relevant contact information for the catalogued Dataset or Dataset Series. Use of vCard is recommended.";
+  sh:minCount 1;
+  sh:name "contact point"@en;
+  sh:node vcard:Kind;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:contactPoint .
+
+epsh:P79 owl:versionInfo "v0.2";
+  sh:description "This property links the Dataset to an available Distribution.";
+  sh:name "distribution"@en;
+  sh:nodeKind sh:BlankNode;
+  sh:path dcat:distribution .
+
+epsh:P80 owl:versionInfo "v0.2";
+  sh:description "This property refers to a geographic region that is covered by the Dataset or by the Dataset Series.";
+  sh:name "spatial coverage"@en;
+  sh:node dcterms:Location;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:spatial .
+
+epsh:P81 owl:versionInfo "v0.2";
+  sh:description "This property refers to a temporal period that the Dataset or the Dataset Series covers.";
+  sh:name "temporal coverage"@en;
+  sh:node dcterms:PeriodOfTime;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:temporal .
+
+epsh:P82 owl:versionInfo "v0.2";
+  sh:description "This property refers to the maturity of the Dataset or of the Dataset Series. Values are concepts of EU Vocabularies Dataset Status Named Authority List: http://publications.europa.eu/resource/authority/dataset-status";
+  sh:maxCount 1;
+  sh:name "status"@en;
+  sh:node euvoc:DatasetStatus;
+  sh:nodeKind sh:IRI;
+  sh:path adms:status .
+
+epsh:P83 owl:versionInfo "v0.2";
+  sh:description "This property refers to the frequency at which the Dataset or a Dataset Series is updated. A Dataset Series is updated when any of its child Datasets is modified, added, or withdrawn.";
+  sh:maxCount 1;
+  sh:name "frequency"@en;
+  sh:node dcterms:Frequency;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:accrualPeriodicity .
+
+epsh:P84 owl:versionInfo "v0.2.1";
+  sh:description "This property is intended for relating a versioned resource to the corresponding non-versioned or abstract resource.";
+  sh:maxCount 1;
+  sh:name "is version of"@en;
+  sh:node dcat:Dataset;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:isVersionOf .
+
+epsh:P85 owl:versionInfo "v0.3";
+  sh:description "This property is intended for relating a non-versioned or abstract resource to several versioned resources";
+  sh:name "has version"@en;
+  sh:path dcat:hasVersion .
+
+epsh:P86 owl:versionInfo "v0.2";
+  sh:description "A related Dataset that is supplanted, displaced, or superseded by the described Dataset.";
+  sh:maxCount 1;
+  sh:name "replaces"@en;
+  sh:node dcat:Dataset;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:replaces .
+
+epsh:P87 owl:versionInfo "v0.2";
+  sh:description "A related Dataset that supplants, displaces, or supersedes the described Dataset.";
+  sh:maxCount 1;
+  sh:name "is replaced by"@en;
+  sh:node dcat:Dataset;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:isReplacedBy .
+
+epsh:P88 owl:versionInfo "v0.3";
+  sh:description "This property refers to an implementing rule or other specification. In DCAT-EP, this property is used to specify the ontologies or application profiles used to represent the data (ORG-EP, ELI-EP, etc.). In case of conformance to multiple ontologies (e.g., the ontologies used in application profiles), application profiles, and versions of them, this property can be repeated multiple times.";
+  sh:name "conforms to"@en;
+  sh:node dcterms:Standard;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:conformsTo .
+
+epsh:P89 owl:versionInfo "v0.2";
+  sh:description "This property contains a statement about the lineage of a Dataset or a Dataset Series.";
+  sh:name "provenance"@en;
+  sh:node dcterms:ProvenanceStatement;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:provenance .
+
+epsh:P90 owl:versionInfo "v0.2";
+  sh:datatype xsd:string;
+  sh:description "This property contains a version number or other version designation of the Dataset.";
+  sh:maxCount 1;
+  sh:name "version"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcat:version .
+
+epsh:P91 owl:versionInfo "v0.3";
+  sh:datatype rdf:langString;
+  sh:description "This property contains a description of the differences between this version and a previous version of the Dataset. This property can be repeated for parallel language versions of the version notes.";
+  sh:name "version notes"@en;
+  sh:nodeKind sh:Literal;
+  sh:path adms:versionNotes;
+  sh:uniqueLang true .
+
+epsh:P92 owl:versionInfo "v0.2";
+  sh:description "This property is intended for relating a non-versioned or abstract Dataset to a single snapshot that can be used as a permalink to indicate the current version of the content. The notion of version used by this property is limited to versions resulting from revisions occurring to a Dataset as part of its life-cycle.";
+  sh:maxCount 1;
+  sh:name "has current version"@en;
+  sh:node dcat:Dataset;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:hasCurrentVersion .
+
+epsh:P93 owl:versionInfo "v0.2";
+  sh:description "The next Dataset (after the current one) in a Dataset Series.";
+  sh:maxCount 1;
+  sh:name "next"@en;
+  sh:node dcat:Dataset;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:next .
+
+epsh:P94 owl:versionInfo "v0.2";
+  sh:description "The previous Dataset (before the current one) in a Dataset Series.";
+  sh:maxCount 1;
+  sh:name "previous"@en;
+  sh:node dcat:Dataset;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:prev .
+
+epsh:P95 owl:versionInfo "v0.2";
+  sh:description "This property is meant to be used to specify a version chain, consisting of snapshots of a Dataset. The notion of version used by this property is limited to versions resulting from revisions occurring to a Dataset as part of its life-cycle. One of the typical cases here is representing the history of the versions of a dataset that have been released over time.";
+  sh:maxCount 1;
+  sh:name "previous version"@en;
+  sh:node dcat:Dataset;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:previousVersion .
+
+epsh:P98 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P99 owl:versionInfo "v0.2";
+  sh:description "This property refers to the file format of the Distribution.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "format"@en;
+  sh:node dcterms:MediaTypeOrExtent;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:format .
+
+epsh:P100 owl:versionInfo "v0.2";
+  sh:description "A URL of the resource that gives access to a Distribution of the Dataset. E.g. landing page, feed, SPARQL endpoint. dcat:accessURL SHOULD be used for the URL of a service or location that can provide access to this distribution, typically through a Web form, query or API call. dcat:downloadURL is preferred for direct links to downloadable resources. If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page URL associated with the dcat:Dataset SHOULD be duplicated as access URL on a distribution. dcat:accessURL matches the property-chain dcat:accessService/dcat:endpointURL. In the RDF representation of DCAT this is axiomatized as an OWL property-chain axiom.";
+  sh:minCount 1;
+  sh:name "access URL"@en;
+  sh:node rdfs:Resource;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:accessURL .
+
+epsh:P101 owl:versionInfo "v0.2";
+  sh:description "This property contains a URL that is a direct link to a downloadable file in a given format. The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution’s dcterms:format and/or dcat:mediaType. dcat:downloadURL SHOULD be used for the URL at which this distribution is available directly, typically through a HTTP Get request.";
+  sh:name "download URL"@en;
+  sh:node rdfs:Resource;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:downloadURL .
+
+epsh:P102 owl:versionInfo "v0.3";
+  sh:datatype rdf:langString;
+  sh:description "This property contains a name given to the Resource. This property can be repeated for parallel language versions of the name.";
+  sh:name "title"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:title;
+  sh:uniqueLang true .
+
+epsh:P103 owl:versionInfo "v0.3";
+  sh:datatype rdf:langString;
+  sh:description "This property contains a free-text account of the Resource. This property can be repeated for parallel language versions of the description.";
+  sh:name "description"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcterms:description;
+  sh:uniqueLang true .
+
+epsh:P104 owl:versionInfo "v0.2";
+  sh:description "This property contains the licence under which the Distribution is made available.";
+  sh:maxCount 1;
+  sh:name "licence"@en;
+  sh:node dcterms:LicenseDocument;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:license .
+
+epsh:P105 owl:versionInfo "v0.2";
+  sh:description "This property MAY include information regarding access or restrictions based on privacy, security, or other policies. Three options (:public, :restricted, :non-public)";
+  sh:maxCount 1;
+  sh:name "rights"@en;
+  sh:node dcterms:RightsStatement;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:accessRights .
+
+epsh:P106 owl:versionInfo "v0.2";
+  sh:description "This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Datasets in the Catalog. This property can be repeated if the metadata is provided in multiple languages.";
+  sh:name "language"@en;
+  sh:node dcterms:LinguisticSystem;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:language .
+
+epsh:P107 owl:versionInfo "v0.3";
+  sh:description "This property refers to the maturity of the Dataset. Values are concepts of EU Vocabularies Dataset Status Named Authority List: http://publications.europa.eu/resource/authority/dataset-status";
+  sh:maxCount 1;
+  sh:name "status"@en;
+  sh:node euvoc:DatasetStatus;
+  sh:nodeKind sh:IRI;
+  sh:path adms:status .
+
+epsh:P108 owl:versionInfo "v0.2";
+  sh:datatype xsd:nonNegativeInteger;
+  sh:description "This property contains the size of a Distribution in bytes.";
+  sh:maxCount 1;
+  sh:name "byte size"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcat:byteSize .
+
+epsh:P109 owl:versionInfo "v0.2";
+  sh:description "This property refers to the media type of the Distribution.";
+  sh:maxCount 1;
+  sh:name "media type"@en;
+  sh:node dcterms:MediaType;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:mediaType .
+
+epsh:P110 owl:versionInfo "v0.2";
+  sh:description "The package format of the Distribution in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together. This property to be used when the files in the Distribution are packaged, e.g. in a TAR file, a Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a media type as defined by IANA, if available.";
+  sh:maxCount 1;
+  sh:name "package format"@en;
+  sh:node dcterms:MediaType;
+  sh:nodeKind sh:IRI;
+  sh:path dcat:packageFormat .
+
+epsh:P111 owl:versionInfo "v0.2";
+  sh:description "This property provides a mechanism that can be used to verify that the contents of a Distribution have not changed.";
+  sh:maxCount 1;
+  sh:name "checksum"@en;
+  sh:nodeKind sh:BlankNode;
+  sh:path spdx:checksum .
+
+epsh:P112 owl:versionInfo "v0.2";
+  sh:description "This property refers to an established schema to which the described Distribution conforms. In DCAT-EP, this property is used to specify the ontologies or application profiles used to represent the data (ORG-EP, ELI-EP, etc.). In case of conformance to multiple ontologies (e.g., the ontologies used in application profiles), application profiles, and versions of them, this property can be repeated multiple times.";
+  sh:name "conformsTo"@en;
+  sh:node dcterms:Standard;
+  sh:nodeKind sh:IRI;
+  sh:path dcterms:conformsTo .
+
+epsh:P115 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P116 owl:versionInfo "v0.2";
+  sh:datatype xsd:dateTime;
+  sh:description "This property contains the start of the period.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "start date"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcat:startDate .
+
+epsh:P117 owl:versionInfo "v0.2";
+  sh:datatype xsd:dateTime;
+  sh:description "This property contains the end of the period.";
+  sh:maxCount 1;
+  sh:name "end date"@en;
+  sh:nodeKind sh:Literal;
+  sh:path dcat:endDate .
+
+epsh:P121 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P122 owl:versionInfo "v0.2";
+  sh:description "This property identifies the algorithm used to produce the Checksum.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "algorithm"@en;
+  sh:nodeKind sh:IRI;
+  sh:path spdx:algorithm .
+
+epsh:P123 owl:versionInfo "v0.2";
+  sh:datatype xsd:hexBinary;
+  sh:description "This property provides a lower case hexadecimal encoded digest value produced using a specific algorithm.";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "checksum value"@en;
+  sh:nodeKind sh:Literal;
+  sh:path spdx:checksumValue .
+
+epsh:P127 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P128 owl:versionInfo "v0.3";
+  sh:datatype xsd:string;
+  sh:description "The name of the organisation associated with an agent.";
+  sh:maxCount 1;
+  sh:name "organisation name"@en;
+  sh:nodeKind sh:Literal;
+  sh:path vcard:organization-name .
+
+epsh:P129 owl:versionInfo "v0.2";
+  sh:datatype xsd:string;
+  sh:description "The formatted name of an agent.";
+  sh:maxCount 1;
+  sh:name "formatted name"@en;
+  sh:nodeKind sh:Literal;
+  sh:path vcard:hasFN .
+
+epsh:P130 owl:versionInfo "v0.2";
+  sh:description "An email of an agent.";
+  sh:maxCount 1;
+  sh:name "has email"@en;
+  sh:node rdfs:Resource;
+  sh:nodeKind sh:IRI;
+  sh:path vcard:hasEmail .
+
+epsh:P131 owl:versionInfo "v0.2";
+  sh:description "A URL associated with an agent.";
+  sh:maxCount 1;
+  sh:name "URL"@en;
+  sh:node rdfs:Resource;
+  sh:nodeKind sh:IRI;
+  sh:path vcard:hasURL .
+
+epsh:P134 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P135 owl:versionInfo "v0.3";
+  sh:description "Property stating the concept scheme that a given resource is part of";
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "in scheme"@en;
+  sh:nodeKind sh:IRI;
+  sh:path skos:inScheme .
+
+epsh:P140 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P141 owl:versionInfo "v0.3";
+  sh:description "Property stating the concept scheme that a given resource is part of";
+  sh:hasValue op-aut:licence;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "in scheme"@en;
+  sh:nodeKind sh:IRI;
+  sh:path skos:inScheme .
+
+epsh:P144 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P145 owl:versionInfo "v0.3";
+  sh:description "Property stating the concept scheme that a given resource is part of";
+  sh:hasValue op-aut:country;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "in scheme"@en;
+  sh:nodeKind sh:IRI;
+  sh:path skos:inScheme .
+
+epsh:P148 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P149 owl:versionInfo "v0.3";
+  sh:description "Property stating the concept scheme that a given resource is part of";
+  sh:hasValue op-aut:language;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "in scheme"@en;
+  sh:nodeKind sh:IRI;
+  sh:path skos:inScheme .
+
+epsh:P152 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P153 owl:versionInfo "v0.3";
+  sh:description "Property stating the concept scheme that a given resource is part of";
+  sh:hasValue op-aut:access-right;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "in scheme"@en;
+  sh:nodeKind sh:IRI;
+  sh:path skos:inScheme .
+
+epsh:P156 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P157 owl:versionInfo "v0.3";
+  sh:description "Property stating the concept scheme that a given resource is part of";
+  sh:hasValue op-aut:frequency;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "in scheme"@en;
+  sh:nodeKind sh:IRI;
+  sh:path skos:inScheme .
+
+epsh:P160 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P161 owl:versionInfo "v0.3";
+  sh:description "Property stating the concept scheme that a given resource is part of";
+  sh:hasValue op-aut:file-type;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "in scheme"@en;
+  sh:nodeKind sh:IRI;
+  sh:path skos:inScheme .
+
+epsh:P164 owl:versionInfo "v0.3";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P165 owl:versionInfo "v0.3";
+  sh:description "Property stating the concept scheme that a given resource is part of";
+  sh:hasValue <https://www.iana.org/assignments/media-types/>;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "in scheme"@en;
+  sh:nodeKind sh:IRI;
+  sh:path skos:inScheme .
+
+epsh:P168 owl:versionInfo "v0.4";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P169 owl:versionInfo "v0.4";
+  sh:description "Property stating the concept scheme that a given resource is part of";
+  sh:hasValue op-aut:data-theme;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "in scheme"@en;
+  sh:nodeKind sh:IRI;
+  sh:path skos:inScheme .
+
+epsh:P172 owl:versionInfo "v0.1";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P175 owl:versionInfo "v0.4";
+  sh:description "Property that is used to state that a resource is an instance of a class";
+  sh:minCount 1;
+  sh:name "type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path rdf:type .
+
+epsh:P176 owl:versionInfo "v0.4";
+  sh:description "Property stating the concept scheme that a given resource is part of";
+  sh:hasValue op-aut:dataset-status;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "in scheme"@en;
+  sh:nodeKind sh:IRI;
+  sh:path skos:inScheme .
