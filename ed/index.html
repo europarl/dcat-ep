@@ -308,9 +308,16 @@ body.draft, body.wd, body.ed {background: url('data:image/svg+xml;utf8,<svg xmln
          <div class="sp_section_title_toc toc">
             <h2 id="Index">Table of Contents</h2>
             <ul role="list" class="sp_list_toc ul_type_none t-x-mode">
+
+<li><a href="#description">Description</a></li>
+
+<li><a href="#changes">Change history</a></li>
+
                <li><a href="#prefixes">Namespaces</a></li>
                <li><a href="#diagrams">Diagrams</a></li>
+<!--
                <li><a href="#description">Description</a></li>
+-->
                <li><a href="#dcat:Catalog">Catalog</a></li>
                <li><a href="#dcat:CatalogRecord">Catalog Record</a></li>
                <li><a href="#dcat:DataService">Data Service</a></li>
@@ -334,11 +341,41 @@ body.draft, body.wd, body.ed {background: url('data:image/svg+xml;utf8,<svg xmln
                <li><a href="#dcterms:MediaTypeOrExtent">File Type</a></li>
                <li><a href="#euvoc:DatasetTheme">Theme</a></li>
                <li><a href="#euvoc:DatasetStatus">Dataset Status</a></li>
-
-<li><a href="#changes">Change history</a></li>
-
             </ul>
          </div>
+
+<div class="row mt-3">
+<div class="sp_section_col">
+<section>
+<h2 id="description" class="sp_section_subtitle">Description</h2>
+<p>DCAT-EP is an extension of the DCAT Application Profile for European data portals (DCAT-AP), designed and used for documenting datasets and data services of the European Parliament.</p>
+</section>
+</div>
+</div>
+
+<div class="row mt-3">
+<div class="sp_section_col">
+<section>
+<h2 id="changes" class="sp_section_subtitle">Change history</h2>
+<p>A full change-log is available on <a href="https://github.com/europarl/dcat-ep/commits/">GitHub</a>.</p>
+<section>
+<h3 id="changes-since-dcat-ep-version-0.3">Changes since DCAT-EP Version 0.3</h3>
+<p>The document has undergone the following changes since <a href="https://europarl.github.io/dcat-ep/0.3/">DCAT-EP Version 0.3</a>.</p>
+<ul>
+<li>Editorial fixes.</li>
+<li>Replaced <code>op-aut:dataset-theme</code> with <code>op-aut:data-theme</code> - see Issue <a href="https://github.com/europarl/dcat-ep/issues/15">#15</a>.</li>
+<li>Properties for <code>euvoc:DatasetStatus</code> were wrongly specified on <code>foaf:Agent</code>: fixed - see Issue <a href="https://github.com/europarl/dcat-ep/issues/14">#14</a>.</li>
+<li>Properties for <code>euvoc:DatasetTheme</code> were wrongly specified on <code>foaf:Agent</code>: fixed - see Issue <a href="https://github.com/europarl/dcat-ep/issues/13">#13</a>.</li>
+<li>Replaced <code>rdfs:Standard</code> with <code>dcterms:Standard</code> in <code>dcat:DataService</code> - see Issue <a href="https://github.com/europarl/dcat-ep/issues/12">#12</a>.</li>
+<li>Added <code>sh:uniqueLang</code> constraint to <code>adms:versionNotes</code> - see Issue <a href="https://github.com/europarl/dcat-ep/issues/11">#11</a>.</li>
+<li>Fixed max cardinality of <code>dcat:hasVersion</code> - see Issue <a href="https://github.com/europarl/dcat-ep/issues/10">#10</a>.</li>
+<li>Removed unnecessary typing of shapes as <code>skos:Concept</code>'s - see Issue <a href="https://github.com/europarl/dcat-ep/issues/6">#6</a>.</li>
+</ul>
+</section>
+</section>
+</div>
+</div>
+
          <div class="row mt-3">
             <div class="col">
                <section id="prefixes">
@@ -412,16 +449,6 @@ body.draft, body.wd, body.ed {background: url('data:image/svg+xml;utf8,<svg xmln
          <div>
             <h2 id="description" class="sp_section_subtitle">Description</h2>DCAT-EP is an extension of the DCAT Application Profile for European data portals (DCAT-AP), designed and used for documenting datasets and data services of the European Parliament.</div>
 -->
-
-         <div class="row mt-3">
-            <div class="sp_section_col">
-              <section>
-                <h2 id="description" class="sp_section_subtitle">Description</h2>
-                <p>DCAT-EP is an extension of the DCAT Application Profile for European data portals (DCAT-AP), designed and used for documenting datasets and data services of the European Parliament.</p>
-              </section>
-           </div>
-         </div>
-
          <div class="row mt-3">
             <div class="col">
                <section id="dcat:Catalog">
@@ -2424,31 +2451,6 @@ body.draft, body.wd, body.ed {background: url('data:image/svg+xml;utf8,<svg xmln
                   </table>
                </section>
             </div>
-</div>
-
-<div class="row mt-3">
-<div class="col">
-<section>
-<div class="sp_section_title_table_wrapper">
-<h2 id="changes" class="sp_section_title_table">Change history</h2>
-</div>
-<p>A full change-log is available on <a href="https://github.com/europarl/dcat-ep/commits/">GitHub</a>.</p>
-<section>
-<h3 id="changes-since-dcat-ep-version-0.3">Changes since DCAT-EP Version 0.3</h3>
-<p>The document has undergone the following changes since <a href="https://europarl.github.io/dcat-ep/0.3/">DCAT-EP Version 0.3</a>.</p>
-<ul>
-<li>Editorial fixes.</li>
-<li>Replaced <code>op-aut:dataset-theme</code> with <code>op-aut:data-theme</code> - see Issue <a href="https://github.com/europarl/dcat-ep/issues/15">#15</a>.</li>
-<li>Properties for <code>euvoc:DatasetStatus</code> were wrongly specified on <code>foaf:Agent</code>: fixed - see Issue <a href="https://github.com/europarl/dcat-ep/issues/14">#14</a>.</li>
-<li>Properties for <code>euvoc:DatasetTheme</code> were wrongly specified on <code>foaf:Agent</code>: fixed - see Issue <a href="https://github.com/europarl/dcat-ep/issues/13">#13</a>.</li>
-<li>Replaced <code>rdfs:Standard</code> with <code>dcterms:Standard</code> in <code>dcat:DataService</code> - see Issue <a href="https://github.com/europarl/dcat-ep/issues/12">#12</a>.</li>
-<li>Added <code>sh:uniqueLang</code> constraint to <code>adms:versionNotes</code> - see Issue <a href="https://github.com/europarl/dcat-ep/issues/11">#11</a>.</li>
-<li>Fixed max cardinality of <code>dcat:hasVersion</code> - see Issue <a href="https://github.com/europarl/dcat-ep/issues/10">#10</a>.</li>
-<li>Removed unnecessary typing of shapes as <code>skos:Concept</code>'s - see Issue <a href="https://github.com/europarl/dcat-ep/issues/6">#6</a>.</li>
-</ul>
-</section>
-</section>
-</div>
 </div>
 
 </div>
