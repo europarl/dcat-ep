@@ -53,7 +53,7 @@
 - Properties for euvoc:DatasetTheme were wrongly specified on foaf:Agent: fixed - see Issue https://github.com/europarl/dcat-ep/issues/13
 - Replaced rdfs:Standard with dcterms:Standard in dcat:DataService - see Issue https://github.com/europarl/dcat-ep/issues/12
 - Added sh:uniqueLang constraint to adms:versionNotes - see Issue https://github.com/europarl/dcat-ep/issues/11
-- Removed unnecessary skos:Concept's - see Issue https://github.com/europarl/dcat-ep/issues/6
+- Removed unnecessary typing of shapes as skos:Concept's - see Issue https://github.com/europarl/dcat-ep/issues/6
 - Fixed max cardinality of dcat:hasVersion - see Issue https://github.com/europarl/dcat-ep/issues/10"""@en;
   foaf:depiction <https://europarl.github.io/dcat-ep/ed/dcat-ep.svg> .
 
