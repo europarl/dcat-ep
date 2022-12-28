@@ -6,10 +6,10 @@ DCAT-EP is an extension of the [DCAT Application Profile for European data porta
 
 ## Versions
 
-- Latest version:
-  - [HTML](./index.html)
-  - [SHACL](./dcat-ep.shacl.ttl)
-- [Version 0.3](./0.3/)
+- Latest published version ([HTML](./index.html), [SHACL](./dcat-ep.shacl.ttl))
+- Editor's draft ([HTML](./ed/index.html), [SHACL](.ed/dcat-ep.shacl.ttl)): This is a living document, used to apply revisions in view of the release of new versions of DCAT-EP
+- Previous versions:
+  - Version 0.3 ([HTML](./0.3/index.html), [SHACL](./0.3/dcat-ep.shacl.ttl))
 
 ## Documentation
 
