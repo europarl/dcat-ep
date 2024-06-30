@@ -40,7 +40,7 @@
 - Fixed max cardinality of `dcat:hasVersion` - see Issue [#10](https://github.com/europarl/dcat-ep/issues/10).
 - Removed unnecessary typing of shapes as `skos:Concept`'s - see Issue [#6](https://github.com/europarl/dcat-ep/issues/6)."""@en;
   vann:usageNote "This version of DCAT-EP is a draft specification and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress."@en;
-  adms:status <http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP>;
+  adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP>;
   owl:versionIRI <https://europarl.github.io/dcat-ep/ed/>;
   owl:priorVersion <https://data.europarl.europa.eu/def/dcat-ep/0.3/>;
   dcterms:conformsTo <https://www.w3.org/TR/shacl>;
@@ -49,9 +49,9 @@
   dcterms:modified "2023-11-02"^^xsd:date;
   dcterms:dateCopyrighted "2023"^^xsd:gYear;
   dcterms:license <https://www.europarl.europa.eu/legal-notice/>;
-  dcterms:creator <http://publications.europa.eu/resource/dataset/corporate-body/EP>;
-  dcterms:publisher <http://publications.europa.eu/resource/dataset/corporate-body/EP>;
-  dcterms:rightsHolder <http://publications.europa.eu/resource/dataset/corporate-body/EURUN>;
+  dcterms:creator <http://publications.europa.eu/resource/authority/corporate-body/EP>;
+  dcterms:publisher <http://publications.europa.eu/resource/authority/corporate-body/EP>;
+  dcterms:rightsHolder <http://publications.europa.eu/resource/authority/corporate-body/EURUN>;
   doap:repository <https://github.com/europarl/dcat-ep>;
   foaf:depiction <https://europarl.github.io/dcat-ep/ed/dcat-ep.svg> .
 
