@@ -4,7 +4,7 @@
 |-----------|-------------------------------------------------|
 | iana:     | `https://www.iana.org/assignments/`             |
 | op-aut:   | `http://publications.europa.eu/resource/authority/` |
-| ep-aut:   | `https://data.europarl.europa.eu/def/`          |
+| ept:   | `https://data.europarl.europa.eu/def/`          |
 
 ## List of EU Controlled Vocabularies
 
@@ -33,13 +33,13 @@
 
 | Vocabulary Name                     | Vocabulary URI                                                                 | Used in Application Profile            |
 |-------------------------------------|-------------------------------------------------------------------------------|----------------------------------------|
-| EP Taxonomy on Activities           | [`ep-aut:ep-activities`](https://data.europarl.europa.eu/def/ep-activities)    | `ELI-EP`                               |
-| EP Taxonomy on Decision Methods     | [`ep-aut:ep-decision-methods`](https://data.europarl.europa.eu/def/ep-decision-methods) | `ELI-EP`                               |
-| EP Taxonomy on Document Types       | [`ep-aut:ep-document-types`](https://data.europarl.europa.eu/def/ep-document-types) | `ELI-EP`                               |
-| EP Taxonomy on Entities             | [`ep-aut:ep-entities`](https://data.europarl.europa.eu/def/ep-entities)        | `ELI-EP`, `ORG-EP`                     |
-| EP Taxonomy on Procedure Types      | [`ep-aut:ep-procedure-types`](https://data.europarl.europa.eu/def/ep-procedure-types) | `ELI-EP`                               |
-| EP Taxonomy on Roles                | [`ep-aut:ep-roles`](https://data.europarl.europa.eu/def/ep-roles)              | `ELI-EP`, `ORG-EP`                     |
-| EP Taxonomy on Statuses             | [`ep-aut:ep-statuses`](https://data.europarl.europa.eu/def/ep-statuses)        | `ELI-EP`                               |
+| EP Taxonomy on Activities           | [`ept:ep-activities`](https://data.europarl.europa.eu/def/ep-activities)    | `ELI-EP`                               |
+| EP Taxonomy on Decision Methods     | [`ept:ep-decision-methods`](https://data.europarl.europa.eu/def/ep-decision-methods) | `ELI-EP`                               |
+| EP Taxonomy on Document Types       | [`ept:ep-document-types`](https://data.europarl.europa.eu/def/ep-document-types) | `ELI-EP`                               |
+| EP Taxonomy on Entities             | [`ept:ep-entities`](https://data.europarl.europa.eu/def/ep-entities)        | `ELI-EP`, `ORG-EP`                     |
+| EP Taxonomy on Procedure Types      | [`ept:ep-procedure-types`](https://data.europarl.europa.eu/def/ep-procedure-types) | `ELI-EP`                               |
+| EP Taxonomy on Roles                | [`ept:ep-roles`](https://data.europarl.europa.eu/def/ep-roles)              | `ELI-EP`, `ORG-EP`                     |
+| EP Taxonomy on Statuses             | [`ept:ep-statuses`](https://data.europarl.europa.eu/def/ep-statuses)        | `ELI-EP`                               |
 
 ## Other
 
