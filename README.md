@@ -22,4 +22,4 @@ Additional documentation on the use of DCAT-EP is available in folder [`docs/`](
 
 ## Licence
 
-DCAT-EP is distributed under the terms and conditions described in the [European Parliament Legal Notice](https://www.europarl.europa.eu/legal-notice/).
+DCAT-EP is distributed under the terms and conditions described in the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
